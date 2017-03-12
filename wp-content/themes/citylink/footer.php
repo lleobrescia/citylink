@@ -11,18 +11,54 @@
 
 ?>
 
-	</div><!-- #content -->
+  </div>
+  <!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'citylink' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'citylink' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'citylink' ), 'citylink', '<a href="https://automattic.com/" rel="designer">Basic</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+  <footer class="footer_area">
+    <!-- Bottom Footer Area Start -->
+    <div class="footer_bottom_area">
+      <div class="container">
+        <div class="row">
+          <!-- Footer Social Area Start -->
+          <div class="col-xs-12">
+            <div class="footer_social_area">
+                <?php
+                $facebook = get_option('citylink_facebook');
+                $twitter = get_option('citylink_twitter');
+                $instagram = get_option('citylink_instagram');
+                ?>
 
-<?php wp_footer(); ?>
+                <?php if ($facebook != null) : ?>
+                <a href="<?php echo $facebook; ?>" class="wow fadeInDown" data-wow-delay="0.2s" target="_blank">
+                  <i class="icofont icofont-social-facebook"></i>
+                </a>
+                <?php endif; ?>
+                <?php if ($instagram  != null) : ?>
+                <a href="<?php echo $instagram; ?>" class="wow fadeInDown" data-wow-delay="0.4s" target="_blank">
+                  <i class="icofont icofont-social-instagram"></i>
+                </a>
+                <?php endif; ?>
+                <?php if ($twitter  != null) : ?>
+                <a href="<?php echo $twitter; ?>" class="wow fadeInDown" data-wow-delay="0.6s" target="_blank">
+                  <i class="icofont icofont-social-twitter"></i>
+                </a>
+                <?php endif; ?>
+            </div>
+            <!-- Footer Menu Area Start -->
+            <?php wp_nav_menu( array( 'theme_location' => 'menu-footer', 'menu_id' => 'footer-menu', 'menu_class' => 'footer_menu' ) ); ?>
+          </div>
+        </div>
+      </div>
+      <!-- end./ row -->
+    </div>
+    <!-- end./ container -->
 
-</body>
-</html>
+  </footer>
+  </div>
+  <!-- #page -->
+
+    <?php wp_footer(); ?>
+
+  </body>
+
+  </html>
