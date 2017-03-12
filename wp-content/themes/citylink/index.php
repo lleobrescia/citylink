@@ -17,37 +17,34 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php
-		if ( have_posts() ) :
-
-			if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-
-			<?php
-			endif;
-
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
-
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
-
+	  <section class="welcome_area" id="home">
+    <div class="table">
+      <div class="table_cell">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-7 col-md-8">
+              <div class="welcome_text_area">
+                <h2>Let's your dreams start today</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum repellendus dicta maiores pariatur possimus
+                  corrupti cum corporis officia quas facere?</p>
+                <a href="#download" class="btn btn-default btn-lg"><i class="icofont icofont-download-alt"></i>download now</a>
+              </div>
+            </div>
+            <div class="col-sm-5 col-md-4">
+              <div class="welcome_area_thumb">
+                <img src="img/bg-pattern/welcome-pro-1.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Welcome Area Background Style -->
+    <div class="welcome_style_one"></div>
+    <div class="welcome_style_two"></div>
+    <div class="welcome_style_three"></div>
+    <div class="welcome_style_four"></div>
+  </section>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

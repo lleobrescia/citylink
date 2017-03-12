@@ -9,47 +9,56 @@
  * @package Citylink
  */
 
-?><!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-<head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<link rel="profile" href="http://gmpg.org/xfn/11">
+?>
+  <!DOCTYPE html>
+  <html <?php language_attributes(); ?>>
 
+  <head>
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
 
-<?php wp_head(); ?>
-  <!--[if IE]>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
-	<![endif]-->
-</head>
+    <?php wp_head(); ?>
+    <!--[if IE]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
 
-<body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'citylink' ); ?></a>
+  <body <?php body_class(); ?>>
+    <div id="page" class="site default-version">
+      <header class="header_area">
+        <!-- Main Header Area Start -->
+        <div class="main_header_area animated">
+          <div class="container">
+            <div class="row">
 
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<?php
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
+              <div class="col-sm-2 col-xs-9">
+                <!-- Logo Area:: For better view in all device please use logo image max-width 70px -->
+                <div class="logo_area">
+                  <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                    <?php the_header_image_tag(array('class' => 'img-responsive')); ?>
+                  </a>
+                </div>
+              </div>
 
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
+              <div class="col-sm-10 col-xs-12">
+                <!-- Menu Area Start -->
+                <div class="main_menu_area">
+                    <?php wp_nav_menu( array(
+                      'theme_location'  => 'menu-1',
+                      'container_class'      => 'mainmenu',
+                      'menu_id'         => 'nav',
+                      'depth'           => 1
+                   ) ); ?>
+                </div>
+                <!-- Menu Area End -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Main Header Area End -->
+      </header>
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'citylink' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
-
-	<div id="content" class="site-content">
+      <div id="content" class="site-content">

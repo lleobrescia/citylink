@@ -20,9 +20,6 @@ function citylink_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'citylink_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
-		'width'                  => 1000,
-		'height'                 => 250,
-		'flex-height'            => true,
 		'wp-head-callback'       => 'citylink_header_style',
 	) ) );
 }
