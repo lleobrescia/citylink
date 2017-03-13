@@ -25,6 +25,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 /*Import css template*/
 @import url('css/main.css');
 @import url('css/responsive.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
