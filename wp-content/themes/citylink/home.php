@@ -20,13 +20,15 @@ get_header();?>
           <div class="breadcumb_section">
             <!-- Breadcumb page title start -->
             <div class="page_title">
-              <h3><?php the_title(); ?></h3>
+              <h3>
+                <?php wp_title(''); ?>
+              </h3>
             </div>
             <!-- Breadcumb page pagination start -->
             <ol class="breadcrumb">
               <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a></li>
               <li class="active">
-                <?php the_title(); ?>
+                <?php wp_title(''); ?>
               </li>
             </ol>
           </div>
@@ -39,15 +41,8 @@ get_header();?>
     <!--container-->
   </section>
   <!--breadcumb_area-->
-  <div id="primary" class="content-area">
-    <main id="main" class="site-main" role="main">
-      <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-      <?php get_template_part( 'template-parts/content-page-builder' ); ?>
-      </article>
-    </main>
-    <!-- #main -->
-  </div>
-  <!-- #primary -->
+
+  <?php get_template_part( 'template-parts/content' ); ?>
 
   <?php
 get_footer();

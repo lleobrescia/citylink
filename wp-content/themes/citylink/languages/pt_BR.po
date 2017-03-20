@@ -1,11 +1,9 @@
-#, fuzzy
 msgid ""
 msgstr ""
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "Project-Id-Version: Citylink\n"
 "POT-Creation-Date: 2017-03-14 10:09-0300\n"
-"PO-Revision-Date: 2017-03-14 10:09-0300\n"
-"Last-Translator: Leo Brescia <leonardo@leobrescia.com.br>\n"
+"PO-Revision-Date: 2017-03-14 10:12-0300\n"
 "Language-Team: Leo Brescia <leonardo@leobrescia.com.br>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -14,180 +12,190 @@ msgstr ""
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: style.css\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;"
+"esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;"
+"esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Last-Translator: Leo Brescia <leonardo@leobrescia.com.br>\n"
+"Language: pt_BR\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
 #: 404.php:17
 msgid "Oops! That page can&rsquo;t be found."
-msgstr ""
+msgstr "Oops! esta página não foi encontrada"
 
 #: 404.php:21 template-parts/content-page-builder.php:494
 msgid "It looks like nothing was found at this location."
-msgstr ""
+msgstr "Parece que nada foi encontrado neste local."
 
 #: comments.php:31
 #, php-format
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Um comentário em &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s comentários em &ldquo;%2$s&rdquo;"
 
 #: comments.php:40 comments.php:61
 msgid "Comment navigation"
-msgstr ""
+msgstr "Navegação de comentários"
 
 #: comments.php:43 comments.php:64
 msgid "Older Comments"
-msgstr ""
+msgstr "Comentários mais antigos"
 
 #: comments.php:44 comments.php:65
 msgid "Newer Comments"
-msgstr ""
+msgstr "Comentários mais recentes"
 
 #: comments.php:78
 msgid "Comments are closed."
-msgstr ""
+msgstr "Comentários estão fechados."
 
 #: functions.php:48
 msgid "Primary"
-msgstr ""
+msgstr "Primário"
 
 #: functions.php:49
 msgid "Footer"
-msgstr ""
+msgstr "Rodapé"
 
 #: functions.php:97
 msgid "Sidebar"
-msgstr ""
+msgstr "Barra lateral"
 
 #: functions.php:99
 msgid "Add widgets here."
-msgstr ""
+msgstr "Adicionar widgets aqui."
 
 #: inc/template-tags.php:28
 #, php-format
 msgctxt "post date"
 msgid "Posted on %s"
-msgstr ""
+msgstr "Postado em %s"
 
 #: inc/template-tags.php:33
 #, php-format
 msgctxt "post author"
 msgid "by %s"
-msgstr ""
+msgstr "Por %s"
 
 #: inc/template-tags.php:50 inc/template-tags.php:56
 msgid ", "
-msgstr ""
+msgstr ","
 
 #: inc/template-tags.php:52
 #, php-format
 msgid "Posted in %1$s"
-msgstr ""
+msgstr "Publicado em %1$s"
 
 #: inc/template-tags.php:58
 #, php-format
 msgid "Tagged %1$s"
-msgstr ""
+msgstr "Marcado: %1$s"
 
 #: inc/template-tags.php:65
 #, php-format
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
+"Deixe um comentário<span class=\"screen-reader-text\"> em %s</span>"
 
 #: inc/template-tags.php:72
 #, php-format
 msgid "Edit %s"
-msgstr ""
+msgstr "Editar %s"
 
 #: inc/theme-settings.php:16
 msgid "Theme Settings"
-msgstr ""
+msgstr "Configurações do tema"
 
 #: inc/theme-settings.php:19
 msgid "Contact"
-msgstr ""
+msgstr "Contato"
 
 #: inc/theme-settings.php:22 inc/theme-settings.php:132
 msgid "Test Sublevel"
-msgstr ""
+msgstr "Subnível de teste"
 
 #: inc/theme-settings.php:31
 msgid "You do not have sufficient permissions to access this page."
-msgstr ""
+msgstr "Você não tem permissões suficientes para esta área."
 
 #: inc/theme-settings.php:65
 msgid "settings saved."
-msgstr ""
+msgstr "configurações guardadas."
 
 #: inc/theme-settings.php:75
 msgid "Social Media"
-msgstr ""
+msgstr "Mídia Social"
 
 #: inc/theme-settings.php:89
 msgid "Facebook:"
-msgstr ""
+msgstr "Facebook:"
 
 #: inc/theme-settings.php:97
 msgid "Twitter:"
-msgstr ""
+msgstr "Twitter:"
 
 #: inc/theme-settings.php:105
 msgid "Instagram:"
-msgstr ""
+msgstr "Instagram:"
 
 #: inc/theme-settings.php:119
 msgid "Save Changes"
-msgstr ""
+msgstr "Salvar alterações"
 
 #: template-parts/content-none.php:17
 msgid "Nothing Found"
-msgstr ""
+msgstr "Nada encontrado"
 
 #: template-parts/content-none.php:27
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
+"Pronto para publicar seu primeiro post? <a href=\"%1$s\">Comece aqui</a>."
 
 #: template-parts/content-none.php:32
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
+"Desculpe, mas nada correspondeu aos termos de pesquisa. Por favor, tente "
+"novamente com algumas palavras-chave diferentes."
 
 #: template-parts/content-none.php:40
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
+"Parece que não podemos encontrar o que você está procurando. Talvez a "
+"busca possa ajudar."
 
 #: template-parts/content.php:59
 msgid "Read More"
-msgstr ""
+msgstr "Leia Mais"
 
 #. Theme Name of the plugin/theme
 msgid "Citylink"
-msgstr ""
+msgstr "Citylink"
 
 #. Theme URI of the plugin/theme
 msgid "http://underscores.me/"
-msgstr ""
+msgstr "http://underscores.me/"
 
 #. Description of the plugin/theme
 msgid ""
 "Tema para o Citylink baseado no template Blue - Ultimate Product Landing "
 "Page feito pelo MD NAZRUL ISLAM (http://designing-world.com)"
 msgstr ""
+"Tema para o Citylink baseado no template Blue - Ultimate Product Landing "
+"Page feito pelo MD NAZRUL ISLAM (http://designing-world.com)"
 
 #. Author of the plugin/theme
 msgid "Basic"
-msgstr ""
+msgstr "Basic"
 
 #. Author URI of the plugin/theme
 msgid "http://www.basic.com.br/"
-msgstr ""
+msgstr "http://www.basic.com.br/"

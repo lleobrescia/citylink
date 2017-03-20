@@ -19,7 +19,7 @@ function citylink_add_pages()
     add_submenu_page('citylink-top-level-handle', esc_html__( 'Contact', 'citylink' ), esc_html__( 'Contact', 'citylink' ), 'manage_options', 'citylink-top-level-handle', 'citylink_toplevel_page');
 
     // Add a submenu to the custom top-level menu:
-    add_submenu_page('citylink-top-level-handle', __('Test Sublevel', 'menu-test'), __('Test Sublevel', 'menu-test'), 'manage_options', 'sub-page', 'citylink_sublevel_page');
+    // add_submenu_page('citylink-top-level-handle', __('Test Sublevel', 'menu-test'), __('Test Sublevel', 'menu-test'), 'manage_options', 'sub-page', 'citylink_sublevel_page');
 }
 
 
@@ -127,8 +127,8 @@ function citylink_toplevel_page()
 
 // citylink_sublevel_page() displays the page content for the first submenu
 // of the custom Test Toplevel menu
-function citylink_sublevel_page()
-{
-    echo "<h2>" . __( 'Test Sublevel', 'menu-test' ) . "</h2>";
-}
+// function citylink_sublevel_page()
+// {
+//     echo "<h2>" . __( 'Test Sublevel', 'menu-test' ) . "</h2>";
+// }
 
