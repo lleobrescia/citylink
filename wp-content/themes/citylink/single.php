@@ -8,28 +8,80 @@
  */
 
 get_header(); ?>
-
+	<section class="breadcumb_area text-center" style="background-image: url('<?php the_field('banner_imagem',  get_the_ID()); ?>');">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="breadcumb_section">
+						<!-- Breadcumb page title start -->
+						<div class="page_title">
+							<h3>
+								<?php the_title(); ?>
+							</h3>
+						</div>
+						<!-- Breadcumb page pagination start -->
+						<ol class="breadcrumb">
+							<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a></li>
+							<li class="active">
+								<?php the_title(); ?>
+							</li>
+						</ol>
+					</div>
+					<!--breadcumb_section-->
+				</div>
+				<!--col-xs-12-->
+			</div>
+			<!--row-->
+		</div>
+		<!--container-->
+	</section>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php
-		while ( have_posts() ) : the_post();
+			<?php while ( have_posts() ) : the_post(); ?>
+			<section class="singl-blog-post-area section_padding_100">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-md-9">
+							<!-- Blog Main Image -->
+							<div class="blog-img">
+								<?php the_post_thumbnail(); ?>
+							</div>
+							<div class="singl-blog-post">
+								<figure>
+									<!-- Blog Title -->
+									<div class="singl-blog-title">
+										<h3>
+											<?php the_title(); ?>
+										</h3>
+									</div>
+									<!-- Single Blog Details Area -->
+									<div class="singl-blog-details text-justify">
+										<?php the_content();?>
+									</div>
+									<!-- Blog Tag and share Area -->
 
-			get_template_part( 'template-parts/content', get_post_format() );
+								</figure>
+							</div>
+							<!--singl-blog-post-->
+						</div>
+						<!--col-xs-12 col-md-9-->
 
-			the_post_navigation();
+						<div class="col-xs-12 col-md-3">
+							<?php //sidebar ?>
+						</div>
+					</div>
+					<!-- Pager Area Start -->
+				</div>
+				<!--container-->
+			</section>
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+			<?php	endwhile; ?>
 
-		endwhile; // End of the loop.
-		?>
+		</main>
+		<!-- #main -->
+	</div>
+	<!-- #primary -->
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php
-get_sidebar();
+	<?php
 get_footer();
