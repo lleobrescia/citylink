@@ -96,7 +96,7 @@
               <p>
                 <?php the_sub_field('descrição'); ?>
               </p>
-              <a href="<?php echo get_permalink(the_sub_field('pagina_inicial_do_aplicativo')); ?>" rel="next" title="<?php the_sub_field('titulo_do_botão'); ?>"
+              <a href="<?php echo get_permalink(get_sub_field('pagina_inicial_do_aplicativo')); ?>" rel="next" title="<?php the_sub_field('titulo_do_botão'); ?>"
                 class="home__botao">
                 <?php the_sub_field('titulo_do_botão'); ?>
               </a>
