@@ -67,7 +67,7 @@ if( have_rows('citylink_layout') ):
         <div class="about_product_discription">
           <div class="row">
             <?php if( have_rows('features') ): ?>
-              <?php while ( have_rows('images') ) : the_row(); ?>
+              <?php while ( have_rows('features') ) : the_row(); ?>
             <div class="col-xs-12">
               <div class="single_about_part wow fadeInUp" data-wow-delay="0.2s">
                 <div class="feature_icon">
@@ -174,15 +174,15 @@ if( have_rows('citylink_layout') ):
     </div>
     <!--row-->
     <div class="row">
-    <?php	if( have_rows('images') ): ?>
-      <?php while ( have_rows('images') ) : the_row(); ?>
+    <?php	if( have_rows('beneficio') ): ?>
+      <?php while ( have_rows('beneficio') ) : the_row(); ?>
       <div class="col-sm-6 col-md-3">
         <div class="single_benifits wow fadeInUp item active" data-wow-delay="0.2s">
           <div class="icon_box">
             <i class="fa <?php the_sub_field('beneficio_icone');?>" aria-hidden="true"></i>
           </div>
           <h4><?php the_sub_field('beneficio_titulo');?></h4>
-          <p><?php the_sub_field('beneficio_texto');?></p>
+          <?php the_sub_field('beneficio_texto');?>
         </div>
       </div>
       <!--col-sm-6 col-md-3-->
@@ -233,8 +233,8 @@ if( have_rows('citylink_layout') ):
 </section>
 <!--work_process_area-->
 
-<?php  elseif( get_row_layout() == 'bloco_depoimento' ): ?>
-<section class="testimonial_area section_padding_100">
+<?php  elseif( get_row_layout() == 'bloco_depoimentos' ): ?>
+<section class="testimonial_area section_padding_100" style="background-image: url('<?php the_sub_field('depo_bg');?>');">
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-md-8 col-md-offset-2">
@@ -249,7 +249,7 @@ if( have_rows('citylink_layout') ):
               </div>
               <!-- Single testimonial text  -->
               <div class="testimonial_text">
-                <p><?php the_sub_field('depoimento_comentario');?></p>
+                <?php the_sub_field('depoimento_comentario');?>
                 <!--  Rating  -->
                 <div class="rating">
                 </div>
@@ -274,7 +274,7 @@ if( have_rows('citylink_layout') ):
 </section>
 <!--testimonial_area-->
 
-<?php  elseif( have_rows() == 'bloco_slide' ): ?>
+<?php  elseif( get_row_layout() == 'bloco_slide' ): ?>
 <section class="app_screenshot_area section_padding_100">
   <div class="container">
     <div class="row">
@@ -313,15 +313,15 @@ if( have_rows('citylink_layout') ):
 </section>
 <!--app_screenshot_area-->
 
-<?php  elseif( have_rows() == 'bloco_preco' ): ?>
+<?php  elseif( get_row_layout() == 'bloco_preco' ): ?>
 <section class="price_plan_area section_padding_100_70" id="price">
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
         <!-- Section Heading Start -->
         <div class="section_heading wow fadeInUp">
-          <h2><?php the_sub_field('video_imagem');?></h2>
-          <p><?php the_sub_field('video_imagem');?></p>
+          <h2><?php the_sub_field('preco_titulo');?></h2>
+          <p><?php the_sub_field('preco_subtitulo');?></p>
         </div>
         <!-- Section Heading End -->
       </div>
@@ -330,13 +330,13 @@ if( have_rows('citylink_layout') ):
     <!--row-->
 
     <div class="row">
-    <?php if( have_rows('preco_box') ): ?>
+    <?php if( get_row_layout('preco_box') ): ?>
       <?php while ( have_rows('preco_box') ) : the_row(); ?>
       <div class="col-sm-6 col-md-3">
         <div class="single_price_plan item wow fadeInUp" data-wow-delay="0.2s">
           <div class="title">
-            <h3><?php the_sub_field('preco_titulo');?></h3>
-            <p><?php the_sub_field('preco_subtitulo');?></p>
+            <h3><?php the_sub_field('preco_box_titulo');?></h3>
+            <p><?php the_sub_field('preco_box_desc');?></p>
           </div>
           <div class="price">
             <h4><?php the_sub_field('preco_preco');?></h4>
@@ -359,7 +359,7 @@ if( have_rows('citylink_layout') ):
 </section>
 <!--price_plan_area-->
 
-<?php  elseif( have_rows() == 'bloco_texto' ): ?>
+<?php  elseif( get_row_layout() == 'bloco_texto' ): ?>
 <section class="about_us_area section_padding_100">
   <div class="container">
     <div class="row">
@@ -387,7 +387,7 @@ if( have_rows('citylink_layout') ):
 </section>
 <!--about_us_area-->
 
-<?php  elseif( have_rows() == 'bloco_faq' ): ?>
+<?php  elseif( get_row_layout() == 'bloco_faq' ): ?>
 <section class="faq_area section_padding_100" id="faq">
   <div class="container">
     <div class="row">
@@ -428,7 +428,7 @@ if( have_rows('citylink_layout') ):
   </div>
 </section>
 
-<?php  elseif( have_rows() == 'bloco_historico' ): ?>
+<?php  elseif( get_row_layout() == 'bloco_historico' ): ?>
 <section class="timeline_area section_padding_100">
   <div class="container">
     <div class="row">
