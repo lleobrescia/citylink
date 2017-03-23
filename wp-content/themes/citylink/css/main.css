@@ -1864,6 +1864,7 @@ span.accor-open {
 
 .single_latest_news_img_area {
   text-align: center;
+  min-height: 245px;
 }
 
 .single_latest_news_area .single_latest_news_img_area .published_date {
@@ -1882,6 +1883,7 @@ span.accor-open {
   -webkit-transition-duration: 500ms;
   transition-duration: 500ms;
   font-weight: 400;
+  min-height: 60px;
 }
 
 .single_latest_news_area:hover .single_latest_news_text_area .news_title h4 {
@@ -1891,6 +1893,7 @@ span.accor-open {
 .news_content>p {
   line-height: 27px;
   color: #888;
+  min-height: 106px;
 }
 
 .single_latest_news_area .author,

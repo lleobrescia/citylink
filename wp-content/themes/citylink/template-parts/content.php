@@ -50,7 +50,7 @@
 									<!-- single latest news excerp -->
 									<div class="news_content">
 										<p>
-											<?php the_excerpt(); ?>
+											<?php echo get_excerpt(); ?>
 										</p>
 									</div>
 									<!-- learn more button -->

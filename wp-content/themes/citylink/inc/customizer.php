@@ -24,3 +24,18 @@ function citylink_customize_preview_js() {
 	wp_enqueue_script( 'citylink_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
 add_action( 'customize_preview_init', 'citylink_customize_preview_js' );
+
+
+//Limit for excerpt
+function get_excerpt(){
+    $excerpt = get_the_content();
+    $excerpt = preg_replace(" ([.*?])",'',$excerpt);
+    $excerpt = strip_shortcodes($excerpt);
+    $excerpt = strip_tags($excerpt);
+    $excerpt = substr($excerpt, 0, 150);
+    $excerpt = substr($excerpt, 0, strripos($excerpt, " "));
+    $excerpt = trim(preg_replace( '/s+/', ' ', $excerpt));
+    $excerpt = $excerpt.'[...]';
+
+    return $excerpt;
+}

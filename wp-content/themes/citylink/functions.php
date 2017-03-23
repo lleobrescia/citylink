@@ -136,7 +136,7 @@ function citylink_scripts()
     wp_enqueue_script( 'google maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDk9KNSL1jTv4MY9Pza6w8DJkpI_nHyCnk', array('jquery') );
     wp_enqueue_script( 'map-active', get_template_directory_uri() . '/js/template/map-active.js', array('jquery') );
     wp_enqueue_script( 'wow.min', get_template_directory_uri() . '/js/template/wow.min.js', array('jquery') );
-    wp_enqueue_script( 'custom', get_template_directory_uri() . '/js/template/custom.js', array('jquery') );
+    wp_enqueue_script( 'custom', get_template_directory_uri() . '/js/template/custom.js', array('jquery','owl.carousel.min','ajax-contact','meanmenu','jquery.nav.min','jquery.magnific-popup.min','jquery.easing.1.3','jquery.scrollUp','jquery.matchHeight-min','jquery.counterup','waypoints','YTPlayer.min','google maps','map-active','wow.min') );
 }
 add_action( 'wp_enqueue_scripts', 'citylink_scripts' );
 
