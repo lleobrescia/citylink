@@ -11,9 +11,11 @@
 *
 * @package Citylink
 */
-
+$banner = get_field('banner_interno');
 get_header();?>
-  <section class="breadcumb_area text-center" style="background-image: url('<?php the_field('banner_imagem',  get_the_ID()); ?>');">
+
+<?php if($banner ): ?>
+  <section class="breadcumb_area text-center" style="background-image: url('<?php echo $banner; ?>');">
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
@@ -39,6 +41,7 @@ get_header();?>
     <!--container-->
   </section>
   <!--breadcumb_area-->
+  <?php endif; ?>
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
