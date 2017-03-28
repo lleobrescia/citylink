@@ -112,7 +112,11 @@ function citylink_scripts()
 {
     wp_enqueue_style( 'citylink-style', get_stylesheet_uri() );
 
+    wp_enqueue_style( 'citylink-font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' );
+
     wp_enqueue_script( 'citylink-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+
+    wp_enqueue_script( 'citylink-jquery-ui','https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js', array('jquery') );
 
     wp_enqueue_script( 'citylink-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
@@ -122,21 +126,21 @@ function citylink_scripts()
 
   // TEMPLATE JS
     wp_enqueue_script( 'bootstrap.min', get_template_directory_uri() . '/js/template/bootstrap.min.js', array('jquery') );
-    wp_enqueue_script( 'owl.carousel.min', get_template_directory_uri() . '/js/template/owl.carousel.min.js', array('jquery') );
-    wp_enqueue_script( 'ajax-contact', get_template_directory_uri() . '/js/template/ajax-contact.js', array('jquery') );
-    wp_enqueue_script( 'meanmenu', get_template_directory_uri() . '/js/template/meanmenu.js', array('jquery') );
-    wp_enqueue_script( 'jquery.nav.min', get_template_directory_uri() . '/js/template/jquery.nav.min.js', array('jquery') );
-    wp_enqueue_script( 'jquery.magnific-popup.min', get_template_directory_uri() . '/js/template/jquery.magnific-popup.min.js', array('jquery') );
-    wp_enqueue_script( 'jquery.easing.1.3', get_template_directory_uri() . '/js/template/jquery.easing.1.3.js', array('jquery') );
-    wp_enqueue_script( 'jquery.scrollUp', get_template_directory_uri() . '/js/template/jquery.scrollUp.js', array('jquery') );
-    wp_enqueue_script( 'jquery.matchHeight-min', get_template_directory_uri() . '/js/template/jquery.matchHeight-min.js', array('jquery') );
-    wp_enqueue_script( 'jquery.counterup', get_template_directory_uri() . '/js/template/jquery.counterup.js', array('jquery') );
-    wp_enqueue_script( 'waypoints', get_template_directory_uri() . '/js/template/waypoints.js', array('jquery') );
-    wp_enqueue_script( 'YTPlayer.min', get_template_directory_uri() . '/js/template/YTPlayer.min.js', array('jquery') );
-    wp_enqueue_script( 'google maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDk9KNSL1jTv4MY9Pza6w8DJkpI_nHyCnk', array('jquery') );
-    wp_enqueue_script( 'map-active', get_template_directory_uri() . '/js/template/map-active.js', array('jquery') );
-    wp_enqueue_script( 'wow.min', get_template_directory_uri() . '/js/template/wow.min.js', array('jquery') );
-    wp_enqueue_script( 'custom', get_template_directory_uri() . '/js/template/custom.js', array('jquery','owl.carousel.min','ajax-contact','meanmenu','jquery.nav.min','jquery.magnific-popup.min','jquery.easing.1.3','jquery.scrollUp','jquery.matchHeight-min','jquery.counterup','waypoints','YTPlayer.min','google maps','map-active','wow.min') );
+    // wp_enqueue_script( 'owl.carousel.min', get_template_directory_uri() . '/js/template/owl.carousel.min.js', array('jquery') );
+    // wp_enqueue_script( 'ajax-contact', get_template_directory_uri() . '/js/template/ajax-contact.js', array('jquery') );
+    // wp_enqueue_script( 'meanmenu', get_template_directory_uri() . '/js/template/meanmenu.js', array('jquery') );
+    // wp_enqueue_script( 'jquery.nav.min', get_template_directory_uri() . '/js/template/jquery.nav.min.js', array('jquery') );
+    // wp_enqueue_script( 'jquery.magnific-popup.min', get_template_directory_uri() . '/js/template/jquery.magnific-popup.min.js', array('jquery') );
+    // wp_enqueue_script( 'jquery.easing.1.3', get_template_directory_uri() . '/js/template/jquery.easing.1.3.js', array('jquery') );
+    // wp_enqueue_script( 'jquery.scrollUp', get_template_directory_uri() . '/js/template/jquery.scrollUp.js', array('jquery') );
+    // wp_enqueue_script( 'jquery.matchHeight-min', get_template_directory_uri() . '/js/template/jquery.matchHeight-min.js', array('jquery') );
+    // wp_enqueue_script( 'jquery.counterup', get_template_directory_uri() . '/js/template/jquery.counterup.js', array('jquery') );
+    // wp_enqueue_script( 'waypoints', get_template_directory_uri() . '/js/template/waypoints.js', array('jquery') );
+    // wp_enqueue_script( 'YTPlayer.min', get_template_directory_uri() . '/js/template/YTPlayer.min.js', array('jquery') );
+    // wp_enqueue_script( 'google maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDk9KNSL1jTv4MY9Pza6w8DJkpI_nHyCnk', array('jquery') );
+    // wp_enqueue_script( 'map-active', get_template_directory_uri() . '/js/template/map-active.js', array('jquery') );
+    // wp_enqueue_script( 'wow.min', get_template_directory_uri() . '/js/template/wow.min.js', array('jquery') );
+
 }
 add_action( 'wp_enqueue_scripts', 'citylink_scripts' );
 

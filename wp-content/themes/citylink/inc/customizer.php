@@ -39,3 +39,23 @@ function get_excerpt(){
 
     return $excerpt;
 }
+
+/**
+* Dequeue jQuery Migrate script in WordPress.
+*/
+function citylink_remove_jquery_migrate( &$scripts) {
+    if(!is_admin()) {
+        $scripts->remove( 'jquery');
+        $scripts->add( 'jquery', false, array( 'jquery-core' ), '1.12.4' );
+    }
+}
+add_filter( 'wp_default_scripts', 'citylink_remove_jquery_migrate' );
+
+function citylink_modify_jquery_version() {
+    if (!is_admin()) {
+        wp_deregister_script('jquery');
+        wp_register_script('jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js', false, '2.0.s');
+        wp_enqueue_script('jquery');
+    }
+}
+add_action('init', 'citylink_modify_jquery_version');

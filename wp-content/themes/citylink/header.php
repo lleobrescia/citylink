@@ -16,8 +16,25 @@
   <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="6cHev29VxkaqTQ6Z1ludAgRxQq5C707eqjGv67VS2PE" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="profile" href="http://gmpg.org/xfn/11">
+
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+      ga('create', 'UA-91118528-1', 'auto');
+      ga('send', 'pageview');
+    </script>
 
     <?php wp_head(); ?>
     <!--[if IE]>
@@ -46,7 +63,7 @@
               <div class="col-sm-10 col-xs-12">
                 <!-- Menu Area Start -->
                 <div class="main_menu_area">
-                    <?php wp_nav_menu( array(
+                  <?php wp_nav_menu( array(
                       'theme_location'  => 'menu-1',
                       'container_class'      => 'mainmenu',
                       'menu_id'         => 'nav',

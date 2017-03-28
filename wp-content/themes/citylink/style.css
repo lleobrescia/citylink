@@ -10,14 +10,6 @@ License URI: LICENSE
 Text Domain: citylink
 Tags:
 
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-
-Citylink is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 */
 
 
@@ -42,6 +34,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 # Clearings
 # Widgets
 # Front Page
+  ## Header
+  ## Footer
 # Content
 	## Posts and pages
 	## Comments
@@ -559,31 +553,53 @@ a:active {
   color: white !important;
 }
 
+#bem_vindo {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+  -webkit-align-content: center;
+  align-content: center;
+  vertical-align: middle;
+}
+
 .home__section {
-  min-height: 850px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 83px;
+  overflow: hidden;
+  min-height: 710px;
+  padding-top: 15px;
+  position: relative;
+}
+
+#bem_vindo.home__section {
+  padding-top: 0;
 }
 
 .home__section h1 {
   font-weight: bold;
-  margin-bottom: 35px;
   margin-top: 0;
-  font-size: 3.625em;
+  font-size: 3em;
+}
+
+.home__section h2 {
+  font-size: 1.563em;
+}
+
+@media(min-width:48.000em) {
+  .home__section {
+    min-height: 100vh;
+    padding-top: 83px;
+  }
+  .home__section h1 {
+    font-size: 3.625em;
+  }
 }
 
 .bem__vindo {
   max-width: 600px;
   margin: auto;
-}
-
-@media(min-width:48.000em) {
-  .bem__vindo {
-    position: relative;
-    top: 320px;
-  }
 }
 
 .bem__vindo p {
@@ -605,9 +621,40 @@ a:active {
   text-align: center;
 }
 
+@media(max-width:48.000em) {
+  .section__box .col-sm-pull-6 img {
+    padding-left: 66px;
+  }
+  .section__box .col-sm-push-6 .p_wrapper {
+    margin: auto;
+  }
+}
+
 .section__box {
-  position: relative;
-  top: 150px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.section__box .col-sm-pull-6 {
+  text-align: center;
+}
+
+@media(min-width:48.000em) {
+  .section__box .col-sm-pull-6 {
+    text-align: right;
+  }
+}
+
+@media(max-width:48.000em) {
+  .section__box .col-sm-push-6 {
+    margin: auto;
+    text-align: center;
+    margin-bottom: 20px;
+  }
 }
 
 .section__box p {
@@ -616,9 +663,16 @@ a:active {
 }
 
 .section__box h2 {
-  margin-bottom: 32px;
+  margin-bottom: 15px;
   font-size: 2.063em;
-  margin-top: 90px;
+  margin-top: 15px;
+}
+
+@media(min-width:48.000em) {
+  .section__box h2 {
+    margin-top: 90px;
+    margin-bottom: 32px;
+  }
 }
 
 
@@ -627,8 +681,15 @@ a:active {
 --------------------------------------------------------------*/
 
 .home header {
-  position: fixed;
-  top: 56px;
+  position: absolute;
+  top: 15px;
+}
+
+@media(min-width:48.000em) {
+  .home header {
+    position: fixed;
+    top: 56px;
+  }
 }
 
 .home .mainmenu ul#nav li a {
@@ -644,6 +705,56 @@ a:active {
 
 .home .logo_area {
   padding: 10px 0;
+}
+
+.menu__button {
+  display: none;
+}
+
+@media(max-width:48.000em) {
+  .home .main_menu_area {
+    position: fixed;
+    width: 100%;
+    right: 0;
+    background-color: #363636;
+    padding: 30px;
+    top: 0;
+    transition: all 0.5s ease;
+    overflow: hidden;
+    display: none;
+  }
+  .home .main_menu_area.fechado {
+    width: 0;
+    height: 0;
+    display: none;
+  }
+  .home .main_menu_area.aberto {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .home .main_menu_area .menu {
+    padding: 0;
+    margin: 0;
+  }
+  .home .mainmenu {
+    text-align: left;
+    display: block;
+  }
+  .home .mainmenu ul#nav li {
+    display: block;
+    width: 100%;
+  }
+  .menu__button {
+    display: block;
+    font-size: 1em;
+    z-index: 4;
+    position: fixed;
+    right: 10px;
+  }
+  .menu__button.sumir {
+    display: none !important;
+  }
 }
 
 
