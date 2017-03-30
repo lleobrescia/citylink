@@ -130,7 +130,7 @@ if( have_rows('citylink_layout') ):
                 <p>
                   <?php the_sub_field('video_subtitulo');?>
                 </p>
-                <a href="<?php the_sub_field('video_link');?>" class="video_btn"><i class="icofont icofont-play"></i></a>
+                <a href="<?php the_sub_field('video_link');?>" class="video_btn" data-fancybox rel="nofollow" role="button"><i class="icofont icofont-play"></i></a>
               </div>
               <!--video_area_text-->
             </div>
