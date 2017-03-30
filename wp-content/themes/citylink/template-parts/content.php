@@ -27,7 +27,7 @@
 								<div class="single_latest_news_text_area">
 									<!-- single latest news title -->
 									<div class="news_title">
-										<a href="<?php echo esc_url( get_permalink() ); ?>">
+										<a href="<?php echo esc_url( get_permalink() ); ?>" rel="next">
 											<h4>
 												<?php the_title(); ?>
 											</h4>
@@ -40,12 +40,12 @@
 												<?php the_author(); ?>
 											</p>
 										</div>
-										<div class="date">
+										<time class="date">
 											<i class="icofont icofont-calendar"></i>
 											<p>
 												<?php the_time(); ?>
 											</p>
-										</div>
+										</time>
 									</div>
 									<!-- single latest news excerp -->
 									<div class="news_content">
@@ -55,7 +55,7 @@
 									</div>
 									<!-- learn more button -->
 									<div class="learn_more_button">
-										<a class="btn btn-default" role="button" href="<?php echo esc_url( get_permalink() ); ?>">
+										<a class="btn btn-default" role="button" href="<?php echo esc_url( get_permalink() ); ?>" rel="next">
 											<?php esc_html_e( 'Read More', 'citylink' ); ?>
 										</a>
 									</div>
@@ -79,10 +79,10 @@
 					<nav aria-label="">
 						<ul class="pager">
 							<li class="previous disabled">
-								<?php next_posts_link( 'Older posts' ); ?>
+								<?php next_posts_link( 'Posts Anteriores' ); ?>
 							</li>
 							<li class="next">
-								<?php previous_posts_link( 'Newer posts' ); ?>
+								<?php previous_posts_link( 'Novos Posts' ); ?>
 							</li>
 						</ul>
 					</nav>

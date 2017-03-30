@@ -26,7 +26,7 @@ get_header();?>
             </div>
             <!-- Breadcumb page pagination start -->
             <ol class="breadcrumb">
-              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="prev" title="Página Inicial">Home</a></li>
               <li class="active">
                 <?php wp_title(''); ?>
               </li>

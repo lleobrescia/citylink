@@ -29,17 +29,17 @@
                 ?>
 
                 <?php if ($facebook != null) : ?>
-                <a href="<?php echo $facebook; ?>" class="wow fadeInDown" data-wow-delay="0.2s" target="_blank">
+                <a href="<?php echo $facebook; ?>" class="wow fadeInDown" data-wow-delay="0.2s" target="_blank" rel="external" title="Facebook Citylink">
                   <i class="icofont icofont-social-facebook"></i>
                 </a>
                 <?php endif; ?>
                 <?php if ($instagram  != null) : ?>
-                <a href="<?php echo $instagram; ?>" class="wow fadeInDown" data-wow-delay="0.4s" target="_blank">
+                <a href="<?php echo $instagram; ?>" class="wow fadeInDown" data-wow-delay="0.4s" target="_blank" rel="external" title="Instagram Citylink">
                   <i class="icofont icofont-social-instagram"></i>
                 </a>
                 <?php endif; ?>
                 <?php if ($twitter  != null) : ?>
-                <a href="<?php echo $twitter; ?>" class="wow fadeInDown" data-wow-delay="0.6s" target="_blank">
+                <a href="<?php echo $twitter; ?>" class="wow fadeInDown" data-wow-delay="0.6s" target="_blank" rel="external" title="Twitter Citylink">
                   <i class="icofont icofont-social-twitter"></i>
                 </a>
                 <?php endif; ?>
