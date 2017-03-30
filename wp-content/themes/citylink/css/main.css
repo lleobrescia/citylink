@@ -1,4 +1,3 @@
-
 /* ************************************************************
     :: Template name: Blue - Ultimate Product Landing Page
     :: Template URI: http://designing-world.com
@@ -45,20 +44,13 @@
     ************************* */
 
 @import 'bootstrap.min.css';
-/*@import 'nivoslider.css';*/
 @import 'magnific-popup.css';
 @import 'animate.css';
 @import 'meanmenu.css';
 @import 'icofont.css';
 @import 'owl.carousel.css';
-@import 'YTPlayer.css';
-@import 'mailchimp.css';
 
-/* *************************
-    :: 1.0 Web Fonts 
-    ************************* */
 
-@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,700');
 
 /* *************************
     :: 2.0 Common CSS
@@ -109,13 +101,11 @@ h6 {
   margin-bottom: 15px;
   font-weight: 700;
   letter-spacing: 1px;
-  font-family: 'Poppins', sans-serif;
   margin-top: 0;
 }
 
 p {
   color: #888;
-  font-family: 'Poppins', sans-serif;
   font-weight: 300;
 }
 
@@ -126,7 +116,6 @@ p {
 body {
   font-size: 16px;
   line-height: 24px;
-  font-family: 'Poppins', sans-serif;
 }
 
 body.boxed_version {
@@ -144,7 +133,6 @@ a:focus {
   transition: all 500ms ease 0s;
   text-decoration: none;
   outline: none;
-  font-family: 'Poppins', sans-serif;
   font-weight: 500;
 }
 

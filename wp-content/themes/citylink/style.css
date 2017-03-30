@@ -17,7 +17,7 @@ Tags:
 
 @import url('css/main.css');
 @import url('css/responsive.css');
-@import url('css/owl.carousel.css');
+@import url('fonts/styles.css');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
 /*--------------------------------------------------------------
@@ -124,6 +124,11 @@ big {
 
 html {
   box-sizing: border-box;
+  font-family: 'FrutigerLTStd';
+}
+
+body {
+  font-family: 'FrutigerLTStd';
 }
 
 *,
@@ -657,11 +662,15 @@ a:active {
   height: 40px;
   display: inline-block;
   line-height: 40px;
-  border-radius: 10px;
-  background-color: rgba(199, 170, 170, 0.46);
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.25);
   color: white;
   font-size: 1em;
   text-align: center;
+}
+
+.home__botao:hover {
+  color: #363636;
 }
 
 @media(max-width:48.000em) {
@@ -743,7 +752,7 @@ a:active {
 }
 
 .home .mainmenu ul#nav li a:hover {
-  background-color: rgba(199, 170, 170, 0.46);
+  background-color: rgba(255, 255, 255, 0.25)
 }
 
 .home .logo_area {
