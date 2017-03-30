@@ -64,6 +64,13 @@ get_header();?>
       .app_screenshots .owl-next:hover{
         border-color: <?=$cor ?>;
       }
+      .footer_social_area a{
+        color: <?=$cor ?>;
+      }
+      .footer_social_area a:hover{
+        background-color: <?=$cor ?>;
+        border-color: <?=$cor ?>;
+      }
     </style>
     <?php if($banner ): ?>
     <section class="breadcumb_area text-center" style="background-image: url('<?php echo $banner; ?>');">

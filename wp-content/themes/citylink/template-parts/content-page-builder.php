@@ -298,7 +298,7 @@ if( have_rows('citylink_layout') ):
       <div class="row">
         <div class="col-xs-12 col-md-8 col-md-offset-2">
           <div class="testimonials_area">
-            <div class="testimonials">
+            <div class="testimonials owl-carousel">
               <?php if( have_rows('depoimento') ): ?>
               <?php while ( have_rows('depoimento') ) : the_row(); ?>
               <div class="single_testimonial_area text-center">
@@ -498,8 +498,8 @@ if( have_rows('citylink_layout') ):
       <div class="row">
         <div class="col-xs-12 clearfix">
           <div class="accordions" id="accordion2" role="tablist" aria-multiselectable="true">
-            <?php if( have_rows('pergunta_resposta') ): ?>
-            <?php while ( have_rows('pergunta_resposta') ) : the_row(); $count = 0;?>
+            <?php if( have_rows('pergunta_resposta') ): $count = 0;?>
+            <?php while ( have_rows('pergunta_resposta') ) : the_row(); ?>
             <!-- single accordian area start -->
             <div class="panel single-accordion">
               <h5>

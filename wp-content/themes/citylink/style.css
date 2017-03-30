@@ -863,12 +863,12 @@ a:active {
 ## Posts and pages
 --------------------------------------------------------------*/
 
-.sticky {
-  display: block;
+.owl-nav.disabled {
+  display: none;
 }
 
-.hentry {
-  margin: 0 0 1.5em;
+.sticky {
+  display: block;
 }
 
 .byline,

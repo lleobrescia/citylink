@@ -14,6 +14,7 @@
     // :: Index of jQuery Active Code ::
 
     // :: Screenshots Slider Active Code
+    // :: Testimonials Slider Active Code
 
 
     // :: Screenshots Slider Active Code
@@ -37,6 +38,27 @@
           },
           992: {
             items: 5
+          }
+        }
+      });
+    }
+
+    // :: Testimonials Slider Active Code
+    if ($.fn.owlCarousel) {
+      $(".testimonials").owlCarousel({
+        items: 2,
+        margin: 30,
+        loop: true,
+        nav: false,
+        dots: true,
+        autoplay: true,
+        smartSpeed: 500,
+        responsive: {
+          0: {
+            items: 1
+          },
+          992: {
+            items: 1
           }
         }
       });
