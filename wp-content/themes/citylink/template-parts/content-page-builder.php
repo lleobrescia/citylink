@@ -20,7 +20,7 @@ if( have_rows('citylink_layout') ):
                 <p>
                   <?php the_sub_field('bem-vindo_subtitulo');?>
                 </p>
-                <a href="<?php the_sub_field('bem-vindo_link');?>" class="btn btn-default btn-lg">
+                <a href="<?php the_sub_field('bem-vindo_link');?>" class="btn btn-default btn-lg" target="_blank" title="<?=get_sub_field('bem-vindo_texto-link');?>" rel="external">
                 <i class="fa <?php the_sub_field('bem-vindo_icone');?>" aria-hidden="true"></i>
                 <?php the_sub_field('bem-vindo_texto-link');?>
               </a>
@@ -130,7 +130,9 @@ if( have_rows('citylink_layout') ):
                 <p>
                   <?php the_sub_field('video_subtitulo');?>
                 </p>
-                <a href="<?php the_sub_field('video_link');?>" class="video_btn" data-fancybox rel="nofollow" role="button"><i class="icofont icofont-play"></i></a>
+                <a href="<?php the_sub_field('video_link');?>" class="video_btn" data-fancybox rel="nofollow" role="button">
+                  <i class="icofont icofont-play"></i>
+                </a>
               </div>
               <!--video_area_text-->
             </div>
@@ -173,7 +175,7 @@ if( have_rows('citylink_layout') ):
               <?php the_sub_field('sobre_titulo');?>
             </h3>
             <?php the_sub_field('sobre_conteudo');?>
-            <a href="<?php the_sub_field('sobre_link');?>">
+            <a href="<?php the_sub_field('sobre_link');?>" rel="next" title="<?=get_sub_field('sobre_titulo');?>">
               <?php the_sub_field('sobre_botao');?>
             </a>
           </div>
