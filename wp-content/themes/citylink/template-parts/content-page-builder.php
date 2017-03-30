@@ -360,12 +360,14 @@ if( have_rows('citylink_layout') ):
       <div class="row">
         <div class="col-xs-12">
           <!-- App Screenshot Slider Area -->
-          <div class="app_screenshots">
+          <div class="app_screenshots owl-carousel">
             <?php if( have_rows('slide_imagens') ): ?>
             <?php while ( have_rows('slide_imagens') ) : the_row(); ?>
-            <div class="single_screenshot">
-              <img src="<?php the_sub_field('slide_imagem');?>" alt="">
-            </div>
+
+              <div class="single_screenshot">
+                <img src="<?php the_sub_field('slide_imagem');?>" alt="Screenshot">
+              </div>
+
             <!--single_screenshot-->
             <?php endwhile; ?>
             <?php endif; ?>
@@ -379,6 +381,12 @@ if( have_rows('citylink_layout') ):
     <!--container-->
   </section>
   <!--app_screenshot_area-->
+  <style>
+  .app_screenshots .owl-prev,
+  .app_screenshots .owl-next{
+    cursor:pointer
+  }
+  </style>
 
   <?php  elseif( get_row_layout() == 'bloco_preco' ): ?>
   <section class="price_plan_area section_padding_100_70" id="price">
