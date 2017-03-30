@@ -174,7 +174,7 @@ if( have_rows('citylink_layout') ):
     </div>
     <!--row-->
     <div class="row">
-    <?php	if( have_rows('beneficio') ): ?>
+    <?php	if( have_rows('beneficio') ): $count = 1;?>
       <?php while ( have_rows('beneficio') ) : the_row(); ?>
       <div class="col-sm-6 col-md-3">
         <div class="single_benifits wow fadeInUp item active" data-wow-delay="0.2s">
@@ -186,7 +186,14 @@ if( have_rows('citylink_layout') ):
         </div>
       </div>
       <!--col-sm-6 col-md-3-->
-      <?php endwhile; ?>
+
+      <div class="clearfix visible-xs"></div>
+      <?php if($count == 4): ?>
+      <div class="clearfix hidden-xs hidden-sm"></div>
+      <?php elseif($count == 2): ?>
+      <div class="clearfix visible-sm"></div>
+      <?php endif; ?>
+      <?php $count++; endwhile; ?>
     <?php endif; ?>
     </div>
     <!--row-->
@@ -212,7 +219,7 @@ if( have_rows('citylink_layout') ):
     <!--row-->
 
     <div class="row">
-      <?php if( have_rows('passos') ): ?>
+      <?php if( have_rows('passos') ): $count = 1;?>
         <?php while ( have_rows('passos') ) : the_row(); ?>
         
       <div class="col-sm-6 col-md-3">
@@ -224,7 +231,14 @@ if( have_rows('citylink_layout') ):
         <!--single_work_step-->
       </div>
       <!--col-sm-6 col-md-3-->
-        <?php endwhile; ?>
+      <div class="clearfix visible-xs"></div>
+      <?php if($count == 4): ?>
+      <div class="clearfix hidden-xs hidden-sm"></div>
+      <?php elseif($count == 2): ?>
+      <div class="clearfix visible-sm"></div>
+      <?php endif; ?>
+
+        <?php $count++; endwhile; ?>
       <?php endif; ?>
     </div>
     <!--row-->
