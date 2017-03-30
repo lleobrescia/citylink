@@ -112,8 +112,6 @@ function citylink_scripts()
 {
     wp_enqueue_style( 'citylink-style', get_stylesheet_uri() );
 
-    wp_enqueue_style( 'citylink-fancybox-css', 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css', array('citylink-style') );
-
     wp_enqueue_script( 'citylink-fancybox', 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js', array('jquery') );
 
     wp_enqueue_script( 'citylink-owlcarousel','https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js', array('jquery') );
@@ -128,20 +126,6 @@ function citylink_scripts()
 
   // TEMPLATE JS
     wp_enqueue_script( 'bootstrap.min', get_template_directory_uri() . '/js/template/bootstrap.min.js', array('jquery') );
-    // wp_enqueue_script( 'owl.carousel.min', get_template_directory_uri() . '/js/template/owl.carousel.min.js', array('jquery') );
-    // wp_enqueue_script( 'ajax-contact', get_template_directory_uri() . '/js/template/ajax-contact.js', array('jquery') );
-    // wp_enqueue_script( 'meanmenu', get_template_directory_uri() . '/js/template/meanmenu.js', array('jquery') );
-    // wp_enqueue_script( 'jquery.nav.min', get_template_directory_uri() . '/js/template/jquery.nav.min.js', array('jquery') );
-    // wp_enqueue_script( 'jquery.magnific-popup.min', get_template_directory_uri() . '/js/template/jquery.magnific-popup.min.js', array('jquery') );
-    // wp_enqueue_script( 'jquery.easing.1.3', get_template_directory_uri() . '/js/template/jquery.easing.1.3.js', array('jquery') );
-    // wp_enqueue_script( 'jquery.scrollUp', get_template_directory_uri() . '/js/template/jquery.scrollUp.js', array('jquery') );
-    // wp_enqueue_script( 'jquery.matchHeight-min', get_template_directory_uri() . '/js/template/jquery.matchHeight-min.js', array('jquery') );
-    // wp_enqueue_script( 'jquery.counterup', get_template_directory_uri() . '/js/template/jquery.counterup.js', array('jquery') );
-    // wp_enqueue_script( 'waypoints', get_template_directory_uri() . '/js/template/waypoints.js', array('jquery') );
-    // wp_enqueue_script( 'YTPlayer.min', get_template_directory_uri() . '/js/template/YTPlayer.min.js', array('jquery') );
-    // wp_enqueue_script( 'google maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDk9KNSL1jTv4MY9Pza6w8DJkpI_nHyCnk', array('jquery') );
-    // wp_enqueue_script( 'map-active', get_template_directory_uri() . '/js/template/map-active.js', array('jquery') );
-    // wp_enqueue_script( 'wow.min', get_template_directory_uri() . '/js/template/wow.min.js', array('jquery') );
 
 }
 add_action( 'wp_enqueue_scripts', 'citylink_scripts' );
