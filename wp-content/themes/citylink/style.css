@@ -37,6 +37,7 @@ Tags:
   ## Header
   ## Footer
 # Content
+  ## Footer
 	## Posts and pages
 	## Comments
 # Infinite scroll
@@ -291,6 +292,28 @@ textarea {
 # Navigation
 --------------------------------------------------------------*/
 
+#page .main_header_area {
+  background-color: #363636;
+}
+
+#page .main_header_area {
+  height: 103px;
+}
+
+#page .main_menu_area {
+  top: 5px;
+}
+
+#page .main_menu_area ul {
+  margin: 0
+}
+
+.default-version .mainmenu ul#nav li a,
+.boxed_version .mainmenu ul#nav li a,
+.rtl_version .mainmenu ul#nav li a {
+  color: white;
+}
+
 
 /*--------------------------------------------------------------
 ## Links
@@ -362,17 +385,6 @@ a:active {
   width: 200px;
 }
 
-.main-navigation ul ul li {}
-
-.main-navigation li:hover>a,
-.main-navigation li.focus>a {}
-
-.main-navigation ul ul :hover>a,
-.main-navigation ul ul .focus>a {}
-
-.main-navigation ul ul a:hover,
-.main-navigation ul ul a.focus {}
-
 .main-navigation ul li:hover>ul,
 .main-navigation ul li.focus>ul {
   left: auto;
@@ -383,13 +395,30 @@ a:active {
   left: 100%;
 }
 
-.main-navigation .current_page_item>a,
-.main-navigation .current-menu-item>a,
-.main-navigation .current_page_ancestor>a,
-.main-navigation .current-menu-ancestor>a {}
-
 
 /* Small menu. */
+
+#page .menu__button {
+  position: absolute;
+  top: 36px;
+  right: 15px;
+}
+
+@media (max-width:48.000em) {
+  #page .main_menu_area {
+    width: 100%;
+    background-color: #363636;
+    top: -11px;
+    position: absolute;
+    left: 0;
+  }
+  #page .main_menu_area.fechado {
+    display: none;
+  }
+  #page .main_menu_area.aberto {
+    display: block;
+  }
+}
 
 .menu-toggle,
 .main-navigation.toggled ul {
@@ -805,6 +834,15 @@ a:active {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+
+.footer_bottom_area {
+  background-color: #363636;
+}
 
 
 /*--------------------------------------------------------------

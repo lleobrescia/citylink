@@ -51,28 +51,35 @@
           <div class="container">
             <div class="row">
 
-              <div class="col-sm-2 col-xs-9">
+              <div class="col-sm-2">
                 <!-- Logo Area:: For better view in all device please use logo image max-width 70px -->
                 <div class="logo_area">
                   <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
                     <?php the_header_image_tag(array('class' => 'img-responsive')); ?>
                   </a>
                 </div>
+                <!--logo_area-->
               </div>
+              <!--col-xs-9 col-sm-2-->
 
-              <div class="col-sm-10 col-xs-12">
+              <div class="col-sm-10">
                 <!-- Menu Area Start -->
-                <div class="main_menu_area">
+                <nav class="main_menu_area fechado">
                   <?php wp_nav_menu( array(
                       'theme_location'  => 'menu-1',
                       'container_class'      => 'mainmenu',
                       'menu_id'         => 'nav',
                       'depth'           => 1
                    ) ); ?>
-                </div>
+                </nav>
                 <!-- Menu Area End -->
               </div>
+              <!--col-xs-3 col-sm-10-->
+              <button type="button" class="menu__button" aria-expanded="false">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+              </button>
             </div>
+            <!--row-->
           </div>
         </div>
         <!-- Main Header Area End -->

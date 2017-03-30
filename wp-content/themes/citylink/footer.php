@@ -22,7 +22,7 @@
           <!-- Footer Social Area Start -->
           <div class="col-xs-12">
             <div class="footer_social_area">
-                <?php
+              <?php
                 $facebook = get_option('citylink_facebook');
                 $twitter = get_option('citylink_twitter');
                 $instagram = get_option('citylink_instagram');
@@ -57,7 +57,28 @@
   </div>
   <!-- #page -->
 
-    <?php wp_footer(); ?>
+  <script>
+    (function ($) {
+      $(document).ready(function () {
+        $('.menu__button').on('click', function (event) {
+          event.preventDefault();
+          var check = $(this).attr('aria-expanded');
+          if (check === 'true') {
+            $('.main_menu_area').removeClass("aberto").addClass("fechado");
+            $(this).attr({
+              'aria-expanded': 'false'
+            });
+          } else {
+            $('.main_menu_area').removeClass("fechado").addClass("aberto");
+            $(this).attr({
+              'aria-expanded': 'true'
+            });
+          }
+        });
+      });
+    })(jQuery);
+  </script>
+  <?php wp_footer(); ?>
 
   </body>
 
