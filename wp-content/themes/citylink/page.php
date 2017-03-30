@@ -28,7 +28,8 @@ get_header();?>
       .about_us_text_area>a,
       .single_benifits.active .icon_box,
       .single_price_plan .price,
-      .single-accordion h5 a {
+      .single-accordion h5 a,
+      .single_about_part:hover {
         background-color: <?=$cor ?>;
       }
 
