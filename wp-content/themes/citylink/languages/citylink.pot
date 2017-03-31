@@ -3,20 +3,20 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Citylink\n"
-"POT-Creation-Date: 2017-03-14 10:09-0300\n"
+"POT-Creation-Date: 2017-03-31 17:01-0300\n"
 "PO-Revision-Date: 2017-03-14 10:09-0300\n"
 "Last-Translator: Leo Brescia <leonardo@leobrescia.com.br>\n"
 "Language-Team: Leo Brescia <leonardo@leobrescia.com.br>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.12\n"
+"X-Generator: Poedit 2.0\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: style.css\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
@@ -24,7 +24,7 @@ msgstr ""
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: 404.php:21 template-parts/content-page-builder.php:494
+#: 404.php:21 template-parts/content-page-builder.php:603
 msgid "It looks like nothing was found at this location."
 msgstr ""
 
@@ -104,44 +104,8 @@ msgstr ""
 msgid "Edit %s"
 msgstr ""
 
-#: inc/theme-settings.php:16
+#: inc/theme-settings.php:11 inc/theme-settings.php:12
 msgid "Theme Settings"
-msgstr ""
-
-#: inc/theme-settings.php:19
-msgid "Contact"
-msgstr ""
-
-#: inc/theme-settings.php:22 inc/theme-settings.php:132
-msgid "Test Sublevel"
-msgstr ""
-
-#: inc/theme-settings.php:31
-msgid "You do not have sufficient permissions to access this page."
-msgstr ""
-
-#: inc/theme-settings.php:65
-msgid "settings saved."
-msgstr ""
-
-#: inc/theme-settings.php:75
-msgid "Social Media"
-msgstr ""
-
-#: inc/theme-settings.php:89
-msgid "Facebook:"
-msgstr ""
-
-#: inc/theme-settings.php:97
-msgid "Twitter:"
-msgstr ""
-
-#: inc/theme-settings.php:105
-msgid "Instagram:"
-msgstr ""
-
-#: inc/theme-settings.php:119
-msgid "Save Changes"
 msgstr ""
 
 #: template-parts/content-none.php:17
