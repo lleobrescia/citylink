@@ -41,6 +41,7 @@ Tags:
   ## Footer
 	## Posts and pages
 	## Comments
+# Sidebar
 # Infinite scroll
 # Media
 	## Captions
@@ -297,10 +298,6 @@ textarea {
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
-
-#page .main_header_area {
-  background-color: #363636;
-}
 
 #page .main_header_area {
   height: 103px;
@@ -913,6 +910,19 @@ a:active {
 .bypostauthor {
   display: block;
 }
+
+
+/*--------------------------------------------------------------
+# Sidebar
+--------------------------------------------------------------*/
+
+.widget-title {
+  color: #2196F3;
+  font-weight: 400;
+  font-size: 1.125em;
+}
+
+.tagcloud {}
 
 
 /*--------------------------------------------------------------

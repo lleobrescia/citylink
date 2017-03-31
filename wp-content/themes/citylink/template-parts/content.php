@@ -69,7 +69,7 @@
 				</div>
 				<!--col-xs-12 col-md-9-->
 
-				<?php //sidebar ?>
+				<?php get_sidebar(); ?>
 
 			</div>
 			<!-- end. row -->
