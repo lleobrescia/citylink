@@ -41,6 +41,7 @@ Tags:
   ## Footer
 	## Posts and pages
 	## Comments
+  ## Videos Bloco
 # Sidebar
 # Infinite scroll
 # Media
@@ -606,11 +607,10 @@ a:active {
 }
 
 #bem_vindo {
-  display: -webkit-flex;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -ms-flex-line-pack: center;
-  -webkit-align-content: center;
   align-content: center;
   vertical-align: middle;
 }
@@ -690,7 +690,6 @@ a:active {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   width: 100%;
 }
@@ -775,6 +774,7 @@ a:active {
     background-color: #363636;
     padding: 30px;
     top: 0;
+    -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
     overflow: hidden;
     display: none;
@@ -920,7 +920,7 @@ a:active {
 
 
 /*--------------------------------------------------------------
-# Sidebar
+## Sidebar
 --------------------------------------------------------------*/
 
 .widget-title {
@@ -930,6 +930,38 @@ a:active {
 }
 
 .tagcloud {}
+
+
+/*--------------------------------------------------------------
+## Videos Bloco
+--------------------------------------------------------------*/
+
+.videos_blocos_thumb {
+  height: 195px;
+  position: relative;
+}
+
+.videos_blocos_thumb a {
+  display: block;
+  color: white;
+}
+
+.videos_blocos_thumb img {
+  height: 195px;
+  object-fit: cover;
+}
+
+.videos_blocos_thumb .fa {
+  font-size: 3em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+  line-height: 195px;
+}
 
 
 /*--------------------------------------------------------------

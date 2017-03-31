@@ -20,7 +20,8 @@ if( have_rows('citylink_layout') ):
                 <p>
                   <?php the_sub_field('bem-vindo_subtitulo');?>
                 </p>
-                <a href="<?php the_sub_field('bem-vindo_link');?>" class="btn btn-default btn-lg" target="_blank" title="<?=get_sub_field('bem-vindo_texto-link');?>" rel="external">
+                <a href="<?php the_sub_field('bem-vindo_link');?>" class="btn btn-default btn-lg" target="_blank" title="<?=get_sub_field('bem-vindo_texto-link');?>"
+                  rel="external">
                 <i class="fa <?php the_sub_field('bem-vindo_icone');?>" aria-hidden="true"></i>
                 <?php the_sub_field('bem-vindo_texto-link');?>
               </a>
@@ -364,9 +365,9 @@ if( have_rows('citylink_layout') ):
             <?php if( have_rows('slide_imagens') ): ?>
             <?php while ( have_rows('slide_imagens') ) : the_row(); ?>
 
-              <div class="single_screenshot">
-                <img src="<?php the_sub_field('slide_imagem');?>" alt="Screenshot">
-              </div>
+            <div class="single_screenshot">
+              <img src="<?php the_sub_field('slide_imagem');?>" alt="Screenshot">
+            </div>
 
             <!--single_screenshot-->
             <?php endwhile; ?>
@@ -382,10 +383,10 @@ if( have_rows('citylink_layout') ):
   </section>
   <!--app_screenshot_area-->
   <style>
-  .app_screenshots .owl-prev,
-  .app_screenshots .owl-next{
-    cursor:pointer
-  }
+    .app_screenshots .owl-prev,
+    .app_screenshots .owl-next {
+      cursor: pointer
+    }
   </style>
 
   <?php  elseif( get_row_layout() == 'bloco_preco' ): ?>
@@ -591,6 +592,55 @@ if( have_rows('citylink_layout') ):
     <!--container-->
   </section>
   <!--timeline_area-->
+
+  <?php  elseif( get_row_layout() == 'bloco_videos' ): ?>
+  <section class="work_process_area section_padding_100_70">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <!-- Section Heading Start -->
+          <div class="section_heading wow fadeInUp">
+            <h2>
+              <?php the_sub_field('titulo_videos');?>
+            </h2>
+            <p>
+              <?php the_sub_field('subtitulo_videos');?>
+            </p>
+          </div>
+          <!-- Section Heading End -->
+        </div>
+        <!--col-xs-12-->
+      </div>
+      <!--row-->
+
+      <div class="row">
+        <?php if( have_rows('videos') ): $count = 1;?>
+        <?php while ( have_rows('videos') ) : the_row(); ?>
+        <div class="col-sm-6 col-md-3">
+          <figure class="videos_blocos_thumb">
+            <a href="<?=get_sub_field('link_do_video') ?>" data-fancybox rel="nofollow" role="button">
+              <?= wp_get_attachment_image( get_sub_field('thumbnail'), 'full', "", array( "class" => "img-responsive" ) );  ?>
+              <i class="fa fa-play" aria-hidden="true"></i>
+            </a>
+          </figure>
+
+        </div>
+        <!--col-sm-6 col-md-3-->
+        <div class="clearfix visible-xs"></div>
+        <?php if($count == 4): ?>
+        <div class="clearfix hidden-xs hidden-sm"></div>
+        <?php elseif($count == 2): ?>
+        <div class="clearfix visible-sm"></div>
+        <?php endif; ?>
+
+        <?php $count++; endwhile; ?>
+        <?php endif; ?>
+      </div>
+      <!--row-->
+    </div>
+    <!--container-->
+  </section>
+  <!--work_process_area-->
 
   <?php
       endif;
