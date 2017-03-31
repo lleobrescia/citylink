@@ -16,7 +16,7 @@
   <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="google-site-verification" content="6cHev29VxkaqTQ6Z1ludAgRxQq5C707eqjGv67VS2PE" />
+    <meta name="google-site-verification" content="6cHev29VxkaqTQ6Z1ludAgRxQq5C707eqjGv67VS2PE" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="profile" href="http://gmpg.org/xfn/11">
 
@@ -51,31 +51,36 @@
           <div class="container">
             <div class="row">
 
-              <div class="col-sm-2">
+              <div class="col-sm-3">
                 <!-- Logo Area:: For better view in all device please use logo image max-width 70px -->
                 <div class="logo_area">
-                  <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-                    <?php the_header_image_tag(array('class' => 'img-responsive')); ?>
+                  <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Citylink" rel="prev">
+                    <?php
+                      $idImg = get_field('logo', 'option');
+                      echo wp_get_attachment_image( $idImg, 'full', "", array( "class" => "img-responsive" ) ); 
+                    ?>
                   </a>
                 </div>
                 <!--logo_area-->
               </div>
               <!--col-xs-9 col-sm-2-->
 
-              <div class="col-sm-10">
+              <div class="col-sm-9">
                 <!-- Menu Area Start -->
                 <nav class="main_menu_area fechado">
-                  <?php wp_nav_menu( array(
+                  <?php 
+                  wp_nav_menu( array(
                       'theme_location'  => 'menu-1',
-                      'container_class'      => 'mainmenu',
+                      'container_class' => 'mainmenu',
                       'menu_id'         => 'nav',
                       'depth'           => 1
-                   ) ); ?>
+                   ) ); 
+                   ?>
                 </nav>
                 <!-- Menu Area End -->
               </div>
               <!--col-xs-3 col-sm-10-->
-              <button type="button" class="menu__button" aria-expanded="false">
+              <button type="button" class="menu__button" aria-expanded="false" role="button">
                 <i class="fa fa-bars" aria-hidden="true"></i>
               </button>
             </div>

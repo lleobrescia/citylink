@@ -304,17 +304,23 @@ textarea {
 }
 
 #page .main_menu_area {
-  top: 5px;
+  top: 33px;
 }
 
 #page .main_menu_area ul {
   margin: 0
 }
 
-.default-version .mainmenu ul#nav li a,
-.boxed_version .mainmenu ul#nav li a,
-.rtl_version .mainmenu ul#nav li a {
-  color: white;
+#page .mainmenu ul#nav li a {
+  font-weight: 300;
+  color: #58585a;
+  border-radius: 50px;
+  padding: 10px 20px;
+}
+
+#page .mainmenu ul#nav li a:hover,
+#page .mainmenu ul#nav li.current_page_item a {
+  background: rgba(88, 88, 90, 0.25);
 }
 
 
@@ -324,6 +330,7 @@ textarea {
 
 a {
   color: royalblue;
+  outline: none;
 }
 
 a:hover,
