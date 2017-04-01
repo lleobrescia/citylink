@@ -607,10 +607,11 @@ a:active {
 }
 
 #bem_vindo {
+  display: -webkit-flex;
   display: -ms-flexbox;
-  display: -webkit-box;
   display: flex;
   -ms-flex-line-pack: center;
+  -webkit-align-content: center;
   align-content: center;
   vertical-align: middle;
 }
@@ -690,6 +691,7 @@ a:active {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   width: 100%;
 }
@@ -774,7 +776,6 @@ a:active {
     background-color: #363636;
     padding: 30px;
     top: 0;
-    -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
     overflow: hidden;
     display: none;
