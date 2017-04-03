@@ -59,3 +59,10 @@ function citylink_modify_jquery_version() {
     }
 }
 add_action('init', 'citylink_modify_jquery_version');
+
+function citylink_jetpackme_remove_rp(){
+    $jprp     = Jetpack_RelatedPosts::init();
+    $callback = array($jprp, 'filter_add_target_to_dom');
+    remove_filter('the_content', $callback, 40);
+}
+add_filter('wp', 'citylink_jetpackme_remove_rp', 20);

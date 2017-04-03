@@ -21,28 +21,35 @@ get_header(); ?>
                 <div class="blog-img">
                   <?php the_post_thumbnail(); ?>
                 </div>
+              </div>
+              <div class="col-sm-9 col-sm-offset-2" style="margin-top:30px">
                 <div class="singl-blog-post">
-                  <figure>
-                    <!-- Blog Title -->
-                    <div class="singl-blog-title">
-                      <h3>
-											<?php the_title(); ?>
-											</h3>
-                    </div>
-                    <!-- Single Blog Details Area -->
-                    <div class="singl-blog-details text-justify">
-                      <?php the_content();?>
-                    </div>
-                    <!-- Blog Tag and share Area -->
-
-                  </figure>
+                  <!-- Blog Title -->
+                  <div class="singl-blog-title">
+                    <h3>
+                    <?php the_title(); ?>
+                    </h3>
+                  </div>
+                  <!-- Single Blog Details Area -->
+                  <div class="singl-blog-details text-justify">
+                    <?php the_content();?>
+                  </div>
+                  <!-- Blog Tag and share Area -->
                 </div>
                 <!--singl-blog-post-->
               </div>
-              <!--col-xs-12-->
+              <!--col-sm-9 col-sm-offset-2-->
 
             </div>
             <!-- row -->
+
+            <div class="row">
+              <div class="col-xs-12">
+                <?=do_shortcode('[jetpack-related-posts]'); ?>
+              </div>
+              <!--col-xs-12-->
+            </div>
+            <!--row-->
           </div>
           <!--container-->
         </section>
