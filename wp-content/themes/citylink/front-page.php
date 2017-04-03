@@ -160,17 +160,17 @@
                   ?>
 
                 <?php if ($facebook != null) : ?>
-                <a href="<?php echo $facebook; ?>" class="wow fadeInDown" data-wow-delay="0.2s" target="_blank">
+                <a href="<?php echo $facebook; ?>" class="wow fadeInDown" rel="external" target="_blank">
                   <i class="icofont icofont-social-facebook"></i>
                 </a>
                 <?php endif; ?>
                 <?php if ($instagram  != null) : ?>
-                <a href="<?php echo $instagram; ?>" class="wow fadeInDown" data-wow-delay="0.4s" target="_blank">
+                <a href="<?php echo $instagram; ?>" class="wow fadeInDown" rel="external" target="_blank">
                   <i class="icofont icofont-social-instagram"></i>
                 </a>
                 <?php endif; ?>
                 <?php if ($twitter  != null) : ?>
-                <a href="<?php echo $twitter; ?>" class="wow fadeInDown" data-wow-delay="0.6s" target="_blank">
+                <a href="<?php echo $twitter; ?>" class="wow fadeInDown" rel="external" target="_blank">
                   <i class="icofont icofont-social-twitter"></i>
                 </a>
                 <?php endif; ?>
@@ -180,18 +180,23 @@
           <!--col-xs-12-->
         </div>
         <!--row-->
-        <i id="block-down-arrow" class="fa fa-angle-down" aria-hidden="true" style="cursor:pointer"></i>
+        <i id="block-down-arrow" class="fa fa-angle-down" role="button" aria-hidden="true" style="cursor:pointer"></i>
       </footer>
       <!--home__footer-->
+      <a id="goUp" class="hidden-xs" role="button" rel="nofollow"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
     </article>
     <?php wp_footer(); ?>
     <script src="<?php echo get_template_directory_uri() . '/js/blockScroll.js '?>"></script>
     <script>
       (function ($) {
         var largura = $(window).width();
+        var blockScroller;
         if (largura >= 768) {
-          $("#main-wrap").blockScroll({
-            scrollDuration: 250
+          blockScroller = $("#main-wrap").blockScroll({
+            fadeBlocks: false
+          });
+          $("#goUp").on('click',function(){
+            blockScroller.goto([1]);
           });
         }
         //desabilita o botao do mobile quando scrolling
@@ -202,9 +207,11 @@
             if (st > lastScrollTop) {
               // downscroll code
               $('.menu__button').addClass('sumir');
+               $('#goUp').removeClass('sumir');
             } else {
               // uproll code
               $('.menu__button').removeClass('sumir');
+              $('#goUp').addClass('sumir');
             }
           }
           lastScrollTop = st;

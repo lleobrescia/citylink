@@ -12,12 +12,12 @@
 	<section class="blog_area section_padding_100">
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-12 col-md-9">
+				<div class="col-xs-12">
 					<div class="row">
-						<?php if ( have_posts() ) : ?>
+						<?php if ( have_posts() ) : $count = 1;?>
 						<?php while ( have_posts() ) : the_post();  ?>
 						<!-- single latest news area start -->
-						<div class="col-xs-12 col-sm-6">
+						<div class="col-xs-12 col-sm-6 col-md-4">
 							<div class="single_latest_news_area item">
 								<!-- single latest news thumb -->
 								<div class="single_latest_news_img_area">
@@ -63,22 +63,24 @@
 							</div>
 						</div>
 						<!--col-xs-12 col-sm-6-->
-						<?php endwhile; ?>
+						<?php if($count == 2): ?>
+						<div class="clearfix hidden-md hidden-lg"></div>
+						<?php elseif($count == 3): ?>
+						<div class="clearfix hidden-xs hidden-sm"></div>
+						<?php endif; ?>
+						<?php $count++;endwhile; ?>
 					</div>
 					<!--row-->
 				</div>
 				<!--col-xs-12 col-md-9-->
-
-				<?php get_sidebar(); ?>
-
 			</div>
 			<!-- end. row -->
 
 			<div class="row">
-				<div class="col-xs-12 col-md-9">
+				<div class="col-xs-12">
 					<nav aria-label="">
 						<ul class="pager">
-							<li class="previous disabled">
+							<li class="previous">
 								<?php next_posts_link( 'Posts Anteriores' ); ?>
 							</li>
 							<li class="next">
@@ -87,7 +89,7 @@
 						</ul>
 					</nav>
 				</div>
-				<!--col-xs-12 col-md-9-->
+				<!--col-xs-12-->
 			</div>
 			<!--row-->
 			<?php else: ?>

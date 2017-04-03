@@ -42,7 +42,8 @@ get_header();?>
         background-color: #fff;
       }
       .single_benifits.active h4,
-      .single_work_step>i{
+      .single_work_step>i,
+      .footer_menu a:hover{
         color:<?=$cor ?>;
       }
 

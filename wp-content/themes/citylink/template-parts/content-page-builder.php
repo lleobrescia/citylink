@@ -209,10 +209,10 @@ if( have_rows('citylink_layout') ):
         <!--col-xs-12-->
       </div>
       <!--row-->
-      <div class="row">
+      <div class="row flex__stretch">
         <?php	if( have_rows('beneficio') ): $count = 1;?>
           <?php while ( have_rows('beneficio') ) : the_row(); ?>
-          <div class="col-sm-6 col-md-3">
+          <div class="col-sm-6 col-md-3 flex__stretch">
             <div class="single_benifits wow fadeInUp item active" data-wow-delay="0.2s">
               <div class="icon_box">
                 <i class="fa <?php the_sub_field('beneficio_icone');?>" aria-hidden="true"></i>
@@ -260,11 +260,11 @@ if( have_rows('citylink_layout') ):
       </div>
       <!--row-->
 
-      <div class="row">
+      <div class="row flex__stretch">
         <?php if( have_rows('passos') ): $count = 1;?>
         <?php while ( have_rows('passos') ) : the_row(); ?>
 
-        <div class="col-sm-6 col-md-3">
+        <div class="col-sm-6 col-md-3 flex__stretch">
           <div class="single_work_step wow fadeInUp" data-wow-delay="0.2s">
             <i class="fa <?php the_sub_field('passo_icone');?>" aria-hidden="true"></i>
             <h4>
@@ -409,7 +409,7 @@ if( have_rows('citylink_layout') ):
       </div>
       <!--row-->
 
-      <div class="row">
+      <div class="row price_plan_list">
         <?php if( get_row_layout('preco_box') ): ?>
         <?php while ( have_rows('preco_box') ) : the_row(); ?>
         <div class="col-sm-6 col-md-3">

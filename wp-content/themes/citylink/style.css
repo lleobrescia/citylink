@@ -330,14 +330,14 @@ textarea {
 --------------------------------------------------------------*/
 
 a {
-  color: royalblue;
+  color: #cd322b;
   outline: none;
 }
 
 a:hover,
 a:focus,
 a:active {
-  color: midnightblue;
+  color: #cd322b;
 }
 
 a:focus {
@@ -431,10 +431,12 @@ a:active {
 @media (max-width:48.000em) {
   #page .main_menu_area {
     width: 100%;
-    background-color: #363636;
+    background-color: #f6f6f6;
     top: -11px;
     position: absolute;
     left: 0;
+    padding: 15px 5px;
+    border-bottom: solid thin;
   }
   #page .main_menu_area.fechado {
     display: none;
@@ -607,11 +609,10 @@ a:active {
 }
 
 #bem_vindo {
-  display: -webkit-flex;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -ms-flex-line-pack: center;
-  -webkit-align-content: center;
   align-content: center;
   vertical-align: middle;
 }
@@ -672,6 +673,7 @@ a:active {
   color: white;
   font-size: 1em;
   text-align: center;
+  font-weight: 300 !important;
 }
 
 .home__botao:hover {
@@ -691,7 +693,6 @@ a:active {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   width: 100%;
 }
@@ -776,6 +777,7 @@ a:active {
     background-color: #363636;
     padding: 30px;
     top: 0;
+    -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
     overflow: hidden;
     display: none;
@@ -809,7 +811,7 @@ a:active {
     position: fixed;
     right: 10px;
   }
-  .menu__button.sumir {
+  .sumir {
     display: none !important;
   }
 }
@@ -840,8 +842,9 @@ a:active {
 .home .footer_social_area a {
   background: transparent;
   border: none;
-  margin-right: 40px;
+  margin-right: 20px;
   color: white;
+  width: 20px
 }
 
 .home .fa-angle-down {
@@ -858,6 +861,19 @@ a:active {
   text-align: center;
 }
 
+#goUp {
+  position: fixed;
+  bottom: 5px;
+  z-index: 999999;
+  right: 24px;
+  font-size: 2em;
+  padding: 5px 10px;
+  font-weight: 300;
+  background: rgba(255, 255, 255, 0.25);
+  color: white;
+  cursor: pointer;
+}
+
 
 /*--------------------------------------------------------------
 # Content
@@ -869,7 +885,16 @@ a:active {
 --------------------------------------------------------------*/
 
 .footer_bottom_area {
-  background-color: #363636;
+  border-top: 2px solid #fff;
+  padding-bottom: 70px;
+}
+
+footer-menu {
+  margin: 0;
+}
+
+#footer-menu li {
+  display: inline-block;
 }
 
 
@@ -904,6 +929,57 @@ a:active {
 .page-links {
   clear: both;
   margin: 0 0 1.5em;
+}
+
+.single_benifits.active h4,
+.testimonial_text>p,
+.testimonial_author_name>h4,
+.testimonial_author_name>h5 {
+  font-weight: 300;
+}
+
+.price_plan_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.single_price_plan .price {
+  width: 100px;
+  height: 100px;
+}
+
+.single_price_plan .price h4 {
+  line-height: 100px;
+}
+
+.single_benifits {
+  width: 100%;
+}
+
+@media(min-width: 48.000em) {
+  .flex__stretch {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+
+.blog-img {
+  max-height: 461px;
+}
+
+.blog-img img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 461px;
 }
 
 
