@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 // check if the flexible content field has rows of data
 if( have_rows('citylink_layout') ):
 

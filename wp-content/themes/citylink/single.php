@@ -6,7 +6,7 @@
 *
 * @package Citylink
 */
-
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 get_header(); ?>
   <section class="breadcumb_area text-center" style="background-image: url('<?php the_field('banner_imagem',  get_the_ID()); ?>');">
     <div class="container">

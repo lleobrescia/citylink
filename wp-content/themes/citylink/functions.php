@@ -6,7 +6,7 @@
 *
 * @package Citylink
 */
-
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 if (! function_exists( 'citylink_setup' )) :
     /**
 * Sets up theme defaults and registers support for various WordPress features.

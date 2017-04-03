@@ -21,13 +21,13 @@
 // ** Configurações do MySQL - Você pode pegar estas informações
 // com o serviço de hospedagem ** //
 /** O nome do banco de dados do WordPress */
-define('DB_NAME', 'citylink');
+define('DB_NAME', 'citylink_wordpress');
 
 /** Usuário do banco de dados MySQL */
-define('DB_USER', 'citylink');
+define('DB_USER', 'citylink_basic');
 
 /** Senha do banco de dados MySQL */
-define('DB_PASSWORD', 'citylink');
+define('DB_PASSWORD', 'Hs.5t;=t^*34');
 
 /** Nome do host do MySQL */
 define('DB_HOST', 'localhost');
@@ -56,7 +56,7 @@ define('SECURE_AUTH_KEY',  'swUou=wiK$__l8X`lMWt?q]wlR:b^|^ev@~Cylb.*>}*zgRMF:h|
 define('LOGGED_IN_KEY',    ',RK5#<Psx&-ua:h)TxoD$MOU%W=Bj<9>?+B3h_Us:zVF>q.0Z<p|,|$ixd-v9qFD');
 define('NONCE_KEY',        'I>)xXRS]xKKZ{o1vP1Vpq6u/R&?2v3icXSim8k._>8|2fu+A.}wmPF*mF)]q+J/(');
 define('AUTH_SALT',        'm|LIZaJKq2ied4t~VZm!C)s|-GPzD5-zNhYwR*+.[&Gw+8XL]cf+fmug+e>Ns9c:');
-define('SECURE_AUTH_SALT', '(|%4,q,Ko;86{}|>50ZKc~rZd/?8-QbA`FM+^Sk,-^dznk0cb?>{2]ib$Ap4jiR<');
+define('SECURE_AUTH_SALT', '(|%4,q,Ko;86{}|>50ZKc~rZd/?8-QbA`FM+^Sk,-^dznk0cb{2]ib$Ap4jiR<');
 define('LOGGED_IN_SALT',   'i7O--]Ru|pPNK_{,^-g-k?rMVyi2!Z}30WT.Bzw:5{BqD8Ly|~ %zoYOaz;52}u@');
 define('NONCE_SALT',       'JH`5|3gQI3&GOI]}?5iEFN2WgF xgv0Z*kZz,yk5%ps|-1,SovXA2(=(n[)LGU(7');
 
@@ -83,7 +83,8 @@ $table_prefix  = 'cl_';
  *
  * @link https://codex.wordpress.org/pt-br:Depura%C3%A7%C3%A3o_no_WordPress
  */
-define('WP_DEBUG', false);
+define( 'WP_DEBUG_LOG', true );
+define( 'WP_DEBUG_DISPLAY', false );
 
 /* Isto é tudo, pode parar de editar! :) */
 
@@ -93,3 +94,5 @@ if ( !defined('ABSPATH') )
 
 /** Configura as variáveis e arquivos do WordPress. */
 require_once(ABSPATH . 'wp-settings.php');
+//Disable File Edits
+define('DISALLOW_FILE_EDIT', true);

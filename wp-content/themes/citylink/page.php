@@ -11,6 +11,7 @@
 *
 * @package Citylink
 */
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 $banner = get_field('banner_interno');
 get_header();?>
 
