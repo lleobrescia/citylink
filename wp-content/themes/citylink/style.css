@@ -982,6 +982,11 @@ footer-menu {
   max-height: 461px;
 }
 
+.blog_area,
+.singl-blog-post-area {
+  padding: 115px 0;
+}
+
 
 /*--------------------------------------------------------------
 ## Comments
