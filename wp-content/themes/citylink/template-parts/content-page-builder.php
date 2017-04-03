@@ -643,6 +643,94 @@ if( have_rows('citylink_layout') ):
   </section>
   <!--work_process_area-->
 
+  <?php  elseif( get_row_layout() == 'bloco_de_texto_com_colunas' ): ?>
+  <?php 
+    $cor1    = get_sub_field('cor_inicial');
+    $cor2    = get_sub_field('cor_final');
+    $colunas = get_sub_field('numero_de_colunas');
+    $texto   = get_sub_field('texto');
+    $texto2  = get_sub_field('texto_2');
+    $texto3  = get_sub_field('texto_3');
+    $texto4  = get_sub_field('texto_4');
+    $classe  = '';
+
+    switch ($colunas) {
+      case '1':
+        $classe = 'col-xs-12';
+        break;
+      case '2':
+        $classe = 'col-xs-12 col-sm-6';
+        break;
+      case '3':
+        $classe = 'col-xs-12 col-md-4';
+        break;
+      case '4':
+        $classe = 'col-xs-12 col-sm-6 col-md-3';
+        break;
+      
+      default:
+        # code...
+        break;
+    }
+  ?>
+  <style>
+    .texto_com_colunas{
+      padding: 80px 0;
+      position:relative;
+      overflow: hidden;
+      min-height: 490px;
+    }
+    .texto_com_colunas:before {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 5000px;
+        left: 0;
+        top: 0;
+        content: "";
+        background: <?=$cor1;?>;
+        background: -webkit-linear-gradient(to left, <?=$cor2;?>, <?=$cor1;?>);
+        background: -webkit-linear-gradient(right, <?=$cor2;?>, <?=$cor1;?>);
+        background: linear-gradient(to left, <?=$cor2;?>, <?=$cor1;?>);
+        opacity: 0.9;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    }
+    .texto_colunas_content{
+      margin-bottom:30px;
+      color:white
+    }
+    .texto_colunas_content p{
+      color:white;
+    }
+  </style>
+  <section class="container-fluid texto_com_colunas">
+    <div class="container">
+      <div class="row">
+        <div class="<?=$classe; ?> texto_colunas_content">
+          <?=$texto; ?>
+        </div>
+        <?php if($texto2): ?>
+        <div class="<?=$classe; ?> texto_colunas_content">
+          <?=$texto2; ?>
+        </div>
+        <?php endif; ?>
+        <?php if($texto2): ?>
+        <div class="<?=$classe; ?> texto_colunas_content">
+          <?=$texto3; ?>
+        </div>
+        <?php endif; ?>
+        <?php if($texto2): ?>
+        <div class="<?=$classe; ?> texto_colunas_content">
+          <?=$texto4; ?>
+        </div>
+        <?php endif; ?>
+        
+      </div>
+      <!--row-->
+    </div>
+    <!--container-->
+  </section>
+  <!--container-fluid-->
   <?php
       endif;
   endwhile;
