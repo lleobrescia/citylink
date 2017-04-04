@@ -42,14 +42,15 @@ get_header();?>
         color: <?=$cor ?>;
         background-color: #fff;
       }
+
       .single_benifits.active h4,
       .single_work_step>i,
-      .footer_menu a:hover{
-        color:<?=$cor ?>;
+      .footer_menu a:hover {
+        color: <?=$cor ?>;
       }
 
-      .single_price_plan .button>a:hover, 
-      .single_price_plan .button>a:focus{
+      .single_price_plan .button>a:hover,
+      .single_price_plan .button>a:focus {
         color: #fff;
         border: 3px solid transparent;
         background-color: <?=$cor ?>;
@@ -63,13 +64,15 @@ get_header();?>
       }
 
       .app_screenshots .owl-prev:hover,
-      .app_screenshots .owl-next:hover{
+      .app_screenshots .owl-next:hover {
         border-color: <?=$cor ?>;
       }
-      .footer_social_area a{
+
+      .footer_social_area a {
         color: <?=$cor ?>;
       }
-      .footer_social_area a:hover{
+
+      .footer_social_area a:hover {
         background-color: <?=$cor ?>;
         border-color: <?=$cor ?>;
       }

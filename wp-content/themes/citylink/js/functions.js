@@ -14,6 +14,7 @@
     // :: Index of jQuery Active Code ::
 
     // :: Screenshots Slider Active Code
+    // ::
     // :: Testimonials Slider Active Code
 
 
@@ -43,7 +44,29 @@
       });
     }
 
-    // :: Testimonials Slider Active Code
+    // :: Slide com imagem
+    if ($.fn.owlCarousel) {
+      $(".owl-carousel_texto").owlCarousel({
+        items: 1,
+        margin: 30,
+        loop: true,
+        nav: true,
+        navText: ['<i class="icofont icofont-swoosh-left"></i>', '<i class="icofont icofont-swoosh-right"></i>'],
+        dots: true,
+        autoplay: true,
+        smartSpeed: 1000,
+        responsive: {
+          0: {
+            items: 1
+          },
+          992: {
+            items: 1
+          }
+        }
+      });
+    }
+
+    // :: Testimonials Slider Active Code 
     if ($.fn.owlCarousel) {
       $(".testimonials").owlCarousel({
         items: 2,

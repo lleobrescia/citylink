@@ -681,19 +681,19 @@ if( have_rows('citylink_layout') ):
       min-height: 490px;
     }
     .texto_com_colunas:before {
-        position: absolute;
-        z-index: -1;
-        width: 100%;
-        height: 5000px;
-        left: 0;
-        top: 0;
-        content: "";
-        background: <?=$cor1;?>;
-        background: -webkit-linear-gradient(to left, <?=$cor2;?>, <?=$cor1;?>);
-        background: -webkit-linear-gradient(right, <?=$cor2;?>, <?=$cor1;?>);
-        background: linear-gradient(to left, <?=$cor2;?>, <?=$cor1;?>);
-        opacity: 0.9;
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 5000px;
+      left: 0;
+      top: 0;
+      content: "";
+      background: <?=$cor1;?>;
+      background: -webkit-linear-gradient(to left, <?=$cor2;?>, <?=$cor1;?>);
+      background: -webkit-linear-gradient(right, <?=$cor2;?>, <?=$cor1;?>);
+      background: linear-gradient(to left, <?=$cor2;?>, <?=$cor1;?>);
+      opacity: 0.9;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
     }
     .texto_colunas_content{
       margin-bottom:30px;
@@ -752,7 +752,7 @@ if( have_rows('citylink_layout') ):
     margin-left:15px;
   }
 </style>
-  <section class="faq_area section_padding_100" id="faq">
+  <section class="faq_area section_padding_100" >
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
@@ -806,6 +806,110 @@ if( have_rows('citylink_layout') ):
         </div>
       </div>
     </div>
+  </section>
+
+  <?php  elseif( get_row_layout() == 'slide_com_texto' ): ?>
+  <?php 
+    $cor1    = get_sub_field('cor_1');
+    $cor2    = get_sub_field('cor_2');
+  ?>
+  <style>
+    .owl-carousel_texto img {
+     transform-style: preserve-3d;
+     max-height: 556px;
+     width: auto !important;
+     float: right;
+   }
+
+   .owl-carousel_texto p {
+     color: white;
+   }
+
+   .slide_com_texto:before {
+     position: absolute;
+     z-index: -1;
+     width: 100%;
+     height: 100%;
+     left: 0;
+     bottom: 0;
+     right: 0;
+     top: 0;
+     content: "";
+     background: <?=$cor1;?>;
+     background: -webkit-linear-gradient(to left, <?=$cor2;?>, <?=$cor1;?>);
+     background: -webkit-linear-gradient(right, <?=$cor2;?>, <?=$cor1;?>);
+     background: linear-gradient(to left, <?=$cor2;?>, <?=$cor1;?>);
+     opacity: 0.9;
+     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+   }
+
+   .slide_com_texto .owl-prev,
+   .slide_com_texto .owl-next {
+     background-color: transparent;
+     border: 2px solid #ddd;
+     border-radius: 10px;
+     height: 44px;
+     position: absolute;
+     text-align: center;
+     width: 44px;
+     color: #ddd;
+     -webkit-transition-duration: 500ms;
+     transition-duration: 500ms;
+   }
+
+   .slide_com_texto .owl-prev {
+     margin-top: -22px;
+     left: -22px;
+     top: 50%;
+   }
+
+   .slide_com_texto .owl-prev>i,
+   .slide_com_texto .owl-next>i {
+     font-size: 1.875em;
+     line-height: 40px;
+   }
+
+   .slide_com_texto .owl-next {
+     margin-top: -22px;
+     right: -70px;
+     top: 50%;
+   }
+
+   .slide_com_texto .owl-prev,
+   .slide_com_texto .owl-next {
+     cursor: pointer;
+   }
+  </style>
+  <section class="app_screenshot_area slide_com_texto section_padding_100" style="    position: relative;">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="owl-carousel_texto owl-carousel">
+            <?php if( have_rows('slide') ): ?>
+            <?php while ( have_rows('slide') ) : the_row(); ?>
+
+            <div class="row">
+              <div class="col-xs-6">
+                <?= wp_get_attachment_image( get_sub_field('imagem'), 'full', "", array( "class" => "img-responsive" ) );  ?>
+              </div>
+              <!--col-xs-6-->
+              <div class="col-xs-6" style="padding-top: 15%;color:white">
+                <?php the_sub_field('texto');?>
+              </div>
+              <!--col-xs-6-->
+            </div>
+
+            <!--single_screenshot-->
+            <?php endwhile; ?>
+            <?php endif; ?>
+          </div>
+          <!--app_screenshots-->
+        </div>
+        <!--col-xs-12-->
+      </div>
+      <!--row-->
+    </div>
+    <!--container-->
   </section>
   <?php
       endif;
