@@ -731,6 +731,82 @@ if( have_rows('citylink_layout') ):
     <!--container-->
   </section>
   <!--container-fluid-->
+  <?php  elseif( get_row_layout() == 'bloco_imagem' ): ?>
+  <section class="container" style="margin-bottom: 50px;margin-top: 50px;"> 
+    <div class="row">
+      <div class="col-xs-12">
+        <?= wp_get_attachment_image( get_sub_field('imagem'), 'full', "", array( "class" => "img-responsive block-center" ) );  ?>
+      </div>
+      <!--col-xs-12-->
+    </div>
+    <!--row-->
+  </section>
+  <!--container-->
+
+<?php  elseif( get_row_layout() == 'bloco_funcionalidades' ): ?>
+<style>
+  .funcionalidades_box{
+    padding:15px;
+  }
+  .funcionalidades_single h5{
+    margin-left:15px;
+  }
+</style>
+  <section class="faq_area section_padding_100" id="faq">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <!-- Section Heading Start -->
+          <div class="section_heading wow fadeInUp">
+            <h2>
+              <?php the_sub_field('titulo');?>
+            </h2>
+          </div>
+          <!-- Section Heading End -->
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 clearfix">
+          <div class="accordions" id="accordion3" role="tablist" aria-multiselectable="true">
+            <?php if( have_rows('texto') ): $count = 0;?>
+            <?php while ( have_rows('texto') ) : the_row(); ?>
+            <!-- single accordian area start -->
+            <div class="panel single-accordion">
+              <h5>
+                <a role="button" class="collapsed" aria-expanded="true" aria-controls="seven<?php echo $count; ?>" data-toggle="collapse" data-parent="#accordion3"
+                  href="#seven<?php echo $count; ?>">
+                  <?php the_sub_field('titulo_box');?>
+                  <span class="accor-open"><i class="icofont icofont-rounded-down"></i></span>
+                  <span class="accor-close"><i class="icofont icofont-rounded-up"></i></span>
+                </a>
+              </h5>
+              <div id="seven<?php echo $count; ?>" class="accordion-content collapse">
+                <div class="funcionalidades_box row">
+                  <?php if( have_rows('funcionalidades') ): ?>
+                    <?php while ( have_rows('funcionalidades') ) : the_row(); ?>
+                    <div class="funcionalidades_single col-md-4">
+                      <h5><?php the_sub_field('titulo');?></h5>
+                      <?php the_sub_field('texto');?>
+                    </div>
+                    <!--funcionalidades_single-->
+                    <?php endwhile; ?>
+                  <?php endif; ?>
+                </div>
+                <!--funcionalidades_box-->
+                <p>
+                  <?php the_sub_field('faq_resposta');?>
+                </p>
+              </div>
+            </div>
+            <?php $count++; ?>
+            <?php endwhile; ?>
+            <?php endif; ?>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <?php
       endif;
   endwhile;
