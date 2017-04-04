@@ -295,6 +295,24 @@ textarea {
   width: 100%;
 }
 
+#searchform .input-group-addon {
+  position: relative;
+  padding: 6px 20px;
+}
+
+#searchform .submit {
+  background: transparent;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  border: none;
+  font-size: 1em;
+  color: white;
+  background-color: #cd322b;
+}
+
 
 /*--------------------------------------------------------------
 # Navigation
@@ -1006,12 +1024,68 @@ footer-menu {
 --------------------------------------------------------------*/
 
 .widget-title {
-  color: #2196F3;
+  color: #cd322b;
   font-weight: 400;
   font-size: 1.125em;
 }
 
-.tagcloud {}
+.widget-area ul {
+  margin: 0;
+}
+
+.widget-area ul li>a {
+  border-bottom: 1px dashed #dadada;
+  color: #888;
+  display: block;
+  font-weight: 300;
+  padding: 5px 0 5px 10px;
+  letter-spacing: 1px;
+}
+
+.widget-area ul li>a:hover {
+  border-bottom: 1px dashed transparent;
+  color: #cd322b;
+  padding: 5px 0 5px 15px;
+}
+
+.wpp-list li {
+  border-bottom: 1px dashed #dadada;
+  position: relative;
+  z-index: 1;
+  padding-left: 100px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.wpp-list li a {
+  border: none;
+}
+
+.wpp-list a:not(.wpp-post-title) {
+  left: 0;
+  position: absolute;
+  top: 15px;
+  width: 90px;
+  height: auto;
+  z-index: 9;
+  padding: 0;
+  border-bottom: none;
+}
+
+.wpp-list .wpp-post-title {
+  margin: 0;
+  color: #cd322b;
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+  font-weight: 400;
+  border: none;
+  padding: 0;
+}
+
+.wpp-list a:hover {
+  padding: 0 !important;
+  border-bottom: none !important;
+}
 
 
 /*--------------------------------------------------------------

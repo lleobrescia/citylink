@@ -16,13 +16,11 @@ get_header(); ?>
         <section class="singl-blog-post-area section_padding_100">
           <div class="container">
             <div class="row">
-              <div class="col-xs-12">
+              <div class="col-md-9" style="margin-top:30px">
                 <!-- Blog Main Image -->
                 <div class="blog-img">
                   <?php the_post_thumbnail(); ?>
                 </div>
-              </div>
-              <div class="col-sm-9 col-sm-offset-2" style="margin-top:30px">
                 <div class="singl-blog-post">
                   <!-- Blog Title -->
                   <div class="singl-blog-title">
@@ -38,7 +36,9 @@ get_header(); ?>
                 </div>
                 <!--singl-blog-post-->
               </div>
-              <!--col-sm-9 col-sm-offset-2-->
+              <!--col-sm-9 -->
+
+              <?php get_sidebar(); ?>
 
             </div>
             <!-- row -->
