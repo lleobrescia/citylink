@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Citylink\n"
-"POT-Creation-Date: 2017-03-31 17:01-0300\n"
-"PO-Revision-Date: 2017-03-31 17:01-0300\n"
+"POT-Creation-Date: 2017-04-04 13:20-0300\n"
+"PO-Revision-Date: 2017-04-04 13:20-0300\n"
 "Last-Translator: Leo Brescia <leonardo@leobrescia.com.br>\n"
 "Language-Team: Leo Brescia <leonardo@leobrescia.com.br>\n"
 "Language: pt_BR\n"
@@ -24,7 +24,7 @@ msgstr ""
 msgid "Oops! That page can&rsquo;t be found."
 msgstr "Oops! esta página não foi encontrada."
 
-#: 404.php:21 template-parts/content-page-builder.php:603
+#: 404.php:21 template-parts/content-page-builder.php:818
 msgid "It looks like nothing was found at this location."
 msgstr "Parece que nada foi encontrado neste local."
 
@@ -107,6 +107,10 @@ msgstr "Editar %s"
 #: inc/theme-settings.php:11 inc/theme-settings.php:12
 msgid "Theme Settings"
 msgstr "Configurações do tema"
+
+#: searchform.php:10
+msgid "Search"
+msgstr "Busca"
 
 #: template-parts/content-none.php:17
 msgid "Nothing Found"
