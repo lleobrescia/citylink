@@ -127,6 +127,7 @@ big {
 html {
   box-sizing: border-box;
   font-family: 'FrutigerLTStd';
+  letter-spacing: normal !important;
 }
 
 body {
@@ -1005,6 +1006,17 @@ footer-menu {
   padding: 115px 0;
 }
 
+.learn_more_button>a,
+.single_latest_news_text_area .news_title h4,
+.learn_more_button>a {
+  font-weight: 700;
+  letter-spacing: normal;
+}
+
+.single_latest_news_text_area .news_title h4 {
+  font-size: 1.5em;
+}
+
 
 /*--------------------------------------------------------------
 ## Comments
@@ -1025,7 +1037,7 @@ footer-menu {
 
 .widget-title {
   color: #cd322b;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 1.125em;
 }
 
@@ -1074,12 +1086,13 @@ footer-menu {
 
 .wpp-list .wpp-post-title {
   margin: 0;
-  color: #cd322b;
+  color: #888;
   -webkit-transition-duration: 500ms;
   transition-duration: 500ms;
-  font-weight: 400;
+  font-weight: 700;
   border: none;
   padding: 0;
+  letter-spacing: normal;
 }
 
 .wpp-list a:hover {
