@@ -21,6 +21,8 @@
 // ** Configurações do MySQL - Você pode pegar estas informações
 // com o serviço de hospedagem ** //
 /** O nome do banco de dados do WordPress */
+define( 'WPCACHEHOME', '/home/citylink/public_html/wp-content/plugins/wp-super-cache/' ); //Added by WP-Cache Manager
+define('WP_CACHE', true); //Added by WP-Cache Manager
 define('DB_NAME', 'citylink_wordpress');
 
 /** Usuário do banco de dados MySQL */
@@ -85,6 +87,7 @@ $table_prefix  = 'cl_';
  */
 define( 'WP_DEBUG_LOG', true );
 define( 'WP_DEBUG_DISPLAY', false );
+define( 'WP_POST_REVISIONS', 5 );
 
 /* Isto é tudo, pode parar de editar! :) */
 
