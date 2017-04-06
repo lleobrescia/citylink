@@ -8,7 +8,7 @@ if( have_rows('citylink_layout') ):
 ?>
 
   <?php  if( get_row_layout() == 'bloco_bem-vindo' ): ?>
-  <section class="welcome_area" id="home">
+  <section class="welcome_area">
     <div class="table">
       <div class="table_cell">
         <div class="container">
@@ -32,7 +32,7 @@ if( have_rows('citylink_layout') ):
             <!--col-sm-7 col-md-8-->
             <div class="col-sm-5 col-md-4">
               <div class="welcome_area_thumb">
-                <img src="<?php the_sub_field('bem-vindo_imagem');?>" alt="">
+                <?= wp_get_attachment_image( get_sub_field('vindo_imagem'), 'full', "", "" );  ?>
               </div>
               <!--welcome_area_thumb-->
             </div>
@@ -54,7 +54,7 @@ if( have_rows('citylink_layout') ):
   <!--welcome_area-->
 
   <?php  elseif( get_row_layout() == 'bloco_features' ): ?>
-  <section class="about_area section_padding_100_70" id="product">
+  <section class="about_area section_padding_100_70">
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
@@ -104,7 +104,8 @@ if( have_rows('citylink_layout') ):
         <div class="col-xs-12 col-sm-6 col-md-4">
           <!-- About Product Thumb Area Start -->
           <div class="about_product_thumb text-center wow fadeInLeft" data-wow-delay="0.2s">
-            <img src="<?php the_sub_field('features_imagem');?>" alt="">
+
+            <?= wp_get_attachment_image( get_sub_field('features_imagem'), 'full', "","" );  ?>
           </div>
           <!--about_product_thumb-->
         </div>
@@ -117,8 +118,12 @@ if( have_rows('citylink_layout') ):
   <!--product-->
 
   <?php  elseif( get_row_layout() == 'bloco_video' ): ?>
-  <?php $corInicial = get_sub_field('cor_inicial'); $corFinal = get_sub_field('cor_final'); ?>
-  <section class="video_area" style="background-image: url('<?php the_sub_field('video_imagem');?>');">
+  <?php 
+    $corInicial = get_sub_field('cor_inicial'); 
+    $corFinal   = get_sub_field('cor_final'); 
+    $id         = md5(uniqid(""));
+  ?>
+  <section class="video_area video_area-<?= $id; ?>" style="background-image: url('<?php the_sub_field('video_imagem');?>');">
     <div class="table">
       <div class="table_cell">
         <div class="container">
@@ -150,7 +155,7 @@ if( have_rows('citylink_layout') ):
   </section>
   <!--video_area-->
   <style>
-    .video_area:before {
+    .video_area-<?= $id; ?>:before {
       background: <?=$corInicial ?>;
       background: -webkit-linear-gradient(to left, <?=$corFinal ?>, <?=$corInicial ?>);
       background: -webkit-linear-gradient(right, <?=$corFinal ?>, <?=$corInicial ?>);
@@ -165,7 +170,7 @@ if( have_rows('citylink_layout') ):
         <div class="col-sm-6 col-md-5 col-md-offset-1">
           <!-- About Image -->
           <div class="about_image">
-            <img src="<?php the_sub_field('sobre_imagem');?>" alt="" class="center-block img-responsive">
+            <?= wp_get_attachment_image( get_sub_field('sobre_imagem'), 'full', "", array( "class" => "center-block img-responsive" ) );  ?>
           </div>
           <!--about_image-->
         </div>
@@ -306,7 +311,7 @@ if( have_rows('citylink_layout') ):
               <div class="single_testimonial_area text-center">
                 <!-- Single testimonial thumb  -->
                 <div class="testimonial_author_thumb">
-                  <img src="<?php the_sub_field('depoimento_foto');?>" alt="">
+                  <?= wp_get_attachment_image( get_sub_field('depoimento_foto'), 'full', "", "" );  ?>
                 </div>
                 <!-- Single testimonial text  -->
                 <div class="testimonial_text">
@@ -367,7 +372,7 @@ if( have_rows('citylink_layout') ):
             <?php while ( have_rows('slide_imagens') ) : the_row(); ?>
 
             <div class="single_screenshot">
-              <img src="<?php the_sub_field('slide_imagem');?>" alt="Screenshot">
+              <?= wp_get_attachment_image( get_sub_field('slide_imagem'), 'full', "", "" );  ?>
             </div>
 
             <!--single_screenshot-->
@@ -383,15 +388,9 @@ if( have_rows('citylink_layout') ):
     <!--container-->
   </section>
   <!--app_screenshot_area-->
-  <style>
-    .app_screenshots .owl-prev,
-    .app_screenshots .owl-next {
-      cursor: pointer
-    }
-  </style>
 
   <?php  elseif( get_row_layout() == 'bloco_preco' ): ?>
-  <section class="price_plan_area section_padding_100_70" id="price">
+  <section class="price_plan_area section_padding_100_70" >
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
@@ -480,8 +479,10 @@ if( have_rows('citylink_layout') ):
   </section>
   <!--about_us_area-->
 
-  <?php  elseif( get_row_layout() == 'bloco_faq' ): ?>
-  <section class="faq_area section_padding_100" id="faq">
+  <?php  elseif( get_row_layout() == 'bloco_faq' ): 
+    $id = md5(uniqid(""));
+  ?>
+  <section class="faq_area section_padding_100">
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
@@ -499,20 +500,20 @@ if( have_rows('citylink_layout') ):
       </div>
       <div class="row">
         <div class="col-xs-12 clearfix">
-          <div class="accordions" id="accordion2" role="tablist" aria-multiselectable="true">
-            <?php if( have_rows('pergunta_resposta') ): $count = 0;?>
+          <div class="accordions" id="<?= $id ?>0" role="tablist" aria-multiselectable="true">
+            <?php if( have_rows('pergunta_resposta') ): $count = 1;?>
             <?php while ( have_rows('pergunta_resposta') ) : the_row(); ?>
             <!-- single accordian area start -->
             <div class="panel single-accordion">
               <h5>
-                <a role="button" class="collapsed" aria-expanded="true" aria-controls="six<?php echo $count; ?>" data-toggle="collapse" data-parent="#accordion2"
-                  href="#six<?php echo $count; ?>">
+                <a role="button" class="collapsed" aria-expanded="true" aria-controls="<?= $id ?><?php echo $count; ?>" data-toggle="collapse" data-parent="#<?= $id ?>0"
+                  href="#<?= $id ?><?php echo $count; ?>">
                   <?php the_sub_field('faq_pergunta');?>
                   <span class="accor-open"><i class="icofont icofont-rounded-down"></i></span>
                   <span class="accor-close"><i class="icofont icofont-rounded-up"></i></span>
                 </a>
               </h5>
-              <div id="six<?php echo $count; ?>" class="accordion-content collapse">
+              <div id="<?= $id ?><?php echo $count; ?>" class="accordion-content collapse">
                 <p>
                   <?php the_sub_field('faq_resposta');?>
                 </p>
@@ -653,6 +654,7 @@ if( have_rows('citylink_layout') ):
     $texto3  = get_sub_field('texto_3');
     $texto4  = get_sub_field('texto_4');
     $classe  = '';
+    $id      = md5(uniqid(""));
 
     switch ($colunas) {
       case '1':
@@ -674,36 +676,15 @@ if( have_rows('citylink_layout') ):
     }
   ?>
   <style>
-    .texto_com_colunas{
-      padding: 80px 0;
-      position:relative;
-      overflow: hidden;
-      min-height: 490px;
-    }
-    .texto_com_colunas:before {
-      position: absolute;
-      z-index: -1;
-      width: 100%;
-      height: 5000px;
-      left: 0;
-      top: 0;
-      content: "";
+    .texto_com_colunas-<?= $id; ?>:before  {
       background: <?=$cor1;?>;
       background: -webkit-linear-gradient(to left, <?=$cor2;?>, <?=$cor1;?>);
       background: -webkit-linear-gradient(right, <?=$cor2;?>, <?=$cor1;?>);
       background: linear-gradient(to left, <?=$cor2;?>, <?=$cor1;?>);
-      opacity: 0.9;
-      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
     }
-    .texto_colunas_content{
-      margin-bottom:30px;
-      color:white
-    }
-    .texto_colunas_content p{
-      color:white;
-    }
+
   </style>
-  <section class="container-fluid texto_com_colunas">
+  <section class="texto_com_colunas texto_com_colunas-<?= $id ?>">
     <div class="container">
       <div class="row">
         <div class="<?=$classe; ?> texto_colunas_content">
@@ -743,15 +724,9 @@ if( have_rows('citylink_layout') ):
   </section>
   <!--container-->
 
-<?php  elseif( get_row_layout() == 'bloco_funcionalidades' ): ?>
-<style>
-  .funcionalidades_box{
-    padding:15px;
-  }
-  .funcionalidades_single h5{
-    margin-left:15px;
-  }
-</style>
+<?php  elseif( get_row_layout() == 'bloco_funcionalidades' ): 
+  $id = md5(uniqid(""));
+?>
   <section class="faq_area section_padding_100" >
     <div class="container">
       <div class="row">
@@ -767,20 +742,20 @@ if( have_rows('citylink_layout') ):
       </div>
       <div class="row">
         <div class="col-xs-12 clearfix">
-          <div class="accordions" id="accordion3" role="tablist" aria-multiselectable="true">
-            <?php if( have_rows('texto') ): $count = 0;?>
+          <div class="accordions" id="<?= $id ?>0" role="tablist" aria-multiselectable="true">
+            <?php if( have_rows('texto') ): $count = 1;?>
             <?php while ( have_rows('texto') ) : the_row(); ?>
             <!-- single accordian area start -->
             <div class="panel single-accordion">
               <h5>
-                <a role="button" class="collapsed" aria-expanded="true" aria-controls="seven<?php echo $count; ?>" data-toggle="collapse" data-parent="#accordion3"
-                  href="#seven<?php echo $count; ?>">
+                <a role="button" class="collapsed" aria-expanded="true" aria-controls="<?= $id ?><?php echo $count; ?>" data-toggle="collapse" data-parent="#<?= $id ?>0"
+                  href="#<?= $id ?><?php echo $count; ?>">
                   <?php the_sub_field('titulo_box');?>
                   <span class="accor-open"><i class="icofont icofont-rounded-down"></i></span>
                   <span class="accor-close"><i class="icofont icofont-rounded-up"></i></span>
                 </a>
               </h5>
-              <div id="seven<?php echo $count; ?>" class="accordion-content collapse">
+              <div id="<?= $id ?><?php echo $count; ?>" class="accordion-content collapse">
                 <div class="funcionalidades_box row">
                   <?php if( have_rows('funcionalidades') ): ?>
                     <?php while ( have_rows('funcionalidades') ) : the_row(); ?>
@@ -810,77 +785,20 @@ if( have_rows('citylink_layout') ):
 
   <?php  elseif( get_row_layout() == 'slide_com_texto' ): ?>
   <?php 
-    $cor1    = get_sub_field('cor_1');
-    $cor2    = get_sub_field('cor_2');
+    $id   = md5(uniqid(""));
+    $cor1 = get_sub_field('cor_1');
+    $cor2 = get_sub_field('cor_2');
   ?>
   <style>
-    .owl-carousel_texto img {
-     transform-style: preserve-3d;
-     max-height: 556px;
-     width: auto !important;
-     float: right;
-   }
-
-   .owl-carousel_texto p {
-     color: white;
-   }
-
-   .slide_com_texto:before {
-     position: absolute;
-     z-index: -1;
-     width: 100%;
-     height: 100%;
-     left: 0;
-     bottom: 0;
-     right: 0;
-     top: 0;
-     content: "";
+   .slide_com_texto-<?= $id; ?>:before {
      background: <?=$cor1;?>;
      background: -webkit-linear-gradient(to left, <?=$cor2;?>, <?=$cor1;?>);
      background: -webkit-linear-gradient(right, <?=$cor2;?>, <?=$cor1;?>);
      background: linear-gradient(to left, <?=$cor2;?>, <?=$cor1;?>);
-     opacity: 0.9;
-     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
    }
 
-   .slide_com_texto .owl-prev,
-   .slide_com_texto .owl-next {
-     background-color: transparent;
-     border: 2px solid #ddd;
-     border-radius: 10px;
-     height: 44px;
-     position: absolute;
-     text-align: center;
-     width: 44px;
-     color: #ddd;
-     -webkit-transition-duration: 500ms;
-     transition-duration: 500ms;
-   }
-
-   .slide_com_texto .owl-prev {
-     margin-top: -22px;
-     left: -22px;
-     top: 50%;
-   }
-
-   .slide_com_texto .owl-prev>i,
-   .slide_com_texto .owl-next>i {
-     font-size: 1.875em;
-     line-height: 40px;
-   }
-
-   .slide_com_texto .owl-next {
-     margin-top: -22px;
-     right: -70px;
-     top: 50%;
-   }
-
-   .slide_com_texto .owl-prev,
-   .slide_com_texto .owl-next {
-     cursor: pointer;
-   }
   </style>
-  <section class="app_screenshot_area slide_com_texto section_padding_100" style="    position: relative;">
+  <section class="app_screenshot_area slide_com_texto slide_com_texto-<?= $id; ?> section_padding_100" style="position: relative;">
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
@@ -914,14 +832,6 @@ if( have_rows('citylink_layout') ):
   <?php
       endif;
   endwhile;
-else : ?>
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <p>
-            <?php esc_html_e( 'It looks like nothing was found at this location.', 'citylink' ); ?>
-          </p>
-        </div>
-      </div>
-    </div>
+  ?>
+
     <?php endif;?>

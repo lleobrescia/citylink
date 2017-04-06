@@ -43,6 +43,7 @@ Tags:
 	## Comments
   ## Videos Bloco
 # Sidebar
+# Page Build
 # Infinite scroll
 # Media
 	## Captions
@@ -264,6 +265,7 @@ input[type="datetime-local"],
 input[type="color"],
 textarea {
   color: #666;
+  font-weight: 700;
   border: 1px solid #ccc;
   border-radius: 3px;
   padding: 3px;
@@ -318,6 +320,11 @@ textarea {
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
+
+#page .header_area,
+#page .main_header_area {
+  position: relative
+}
 
 #page .main_header_area {
   height: 103px;
@@ -1003,7 +1010,7 @@ footer-menu {
 
 .blog_area,
 .singl-blog-post-area {
-  padding: 115px 0;
+  padding-top: 15px;
 }
 
 .learn_more_button>a,
@@ -1130,6 +1137,116 @@ footer-menu {
   margin: auto;
   text-align: center;
   line-height: 195px;
+}
+
+
+/*--------------------------------------------------------------
+# Page Build
+--------------------------------------------------------------*/
+
+.owl-carousel_texto img {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  max-height: 556px;
+  width: auto !important;
+  float: right;
+}
+
+.owl-carousel_texto p {
+  color: white;
+}
+
+.slide_com_texto:before,
+.texto_com_colunas:before {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  content: "";
+  opacity: 0.9;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+}
+
+.slide_com_texto .owl-prev,
+.slide_com_texto .owl-next {
+  background-color: transparent;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  height: 44px;
+  position: absolute;
+  text-align: center;
+  width: 44px;
+  color: #ddd;
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+}
+
+.slide_com_texto .owl-prev {
+  margin-top: -22px;
+  left: -22px;
+  top: 50%;
+}
+
+.slide_com_texto .owl-prev>i,
+.slide_com_texto .owl-next>i {
+  font-size: 1.875em;
+  line-height: 40px;
+}
+
+.slide_com_texto .owl-next {
+  margin-top: -22px;
+  right: -70px;
+  top: 50%;
+}
+
+.slide_com_texto .owl-prev,
+.slide_com_texto .owl-next,
+.app_screenshots .owl-prev,
+.app_screenshots .owl-next {
+  cursor: pointer;
+}
+
+@media(max-width:57.500em) {
+  .slide_com_texto .owl-nav {
+    display: none;
+  }
+}
+
+.texto_com_colunas {
+  padding: 80px 0;
+  position: relative;
+  min-height: 490px;
+}
+
+.funcionalidades_box {
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.funcionalidades_single h5 {
+  margin-left: 15px;
+}
+
+.texto_colunas_content {
+  margin-bottom: 30px;
+  color: white
+}
+
+.texto_colunas_content p {
+  color: white;
+}
+
+.welcome_area {
+  width: 100%;
+  height: 600px;
 }
 
 

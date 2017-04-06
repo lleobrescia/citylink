@@ -1,4 +1,3 @@
-//https://github.com/DominikGorecki/block-scroll
 (function( $ ) {
 
   $.fn.blockScroll = function(options) {
